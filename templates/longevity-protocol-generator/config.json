@@ -1,0 +1,282 @@
+{
+  "metadata": {
+    "template": "Longevity Protocol Generator",
+    "version": "1.0.0",
+    "last_updated": "2026-02-13",
+    "description": "Configuration for personalized longevity protocol generation"
+  },
+  "practice_info": {
+    "name": "Optimal Health Lab",
+    "practitioner_name": "Dr. Sarah Johnson",
+    "credentials": "MD, Functional Medicine Certified",
+    "specialties": [
+      "Metabolic health optimization",
+      "Hormone restoration",
+      "Longevity medicine",
+      "Preventive cardiology",
+      "Cognitive performance"
+    ],
+    "target_clients": "High-performing executives and entrepreneurs 35-60 seeking healthspan optimization",
+    "practice_philosophy": "Evidence-based interventions prioritizing metabolic health, hormonal balance, and lifestyle optimization for longevity",
+    "consultation_types": [
+      "Initial assessment (90 min)",
+      "Follow-up (30 min)",
+      "Protocol review (45 min)",
+      "Lab review (30 min)"
+    ]
+  },
+  "protocol_pillars": [
+    {
+      "name": "Metabolic Health",
+      "focus": "Glucose regulation, insulin sensitivity, mitochondrial function",
+      "priority": 1
+    },
+    {
+      "name": "Hormone Optimization",
+      "focus": "Testosterone, thyroid, cortisol, estrogen balance",
+      "priority": 2
+    },
+    {
+      "name": "Sleep Quality",
+      "focus": "Deep sleep, REM, circadian rhythm alignment",
+      "priority": 3
+    },
+    {
+      "name": "Cardiovascular Health",
+      "focus": "VO2 max, blood pressure, lipid optimization, endothelial function",
+      "priority": 4
+    },
+    {
+      "name": "Cognitive Performance",
+      "focus": "Brain health, focus, memory, neuroplasticity",
+      "priority": 5
+    },
+    {
+      "name": "Body Composition",
+      "focus": "Lean mass preservation, visceral fat reduction",
+      "priority": 6
+    }
+  ],
+  "biomarker_panels": {
+    "essential": {
+      "frequency": "baseline_and_quarterly",
+      "markers": [
+        {"name": "Fasting Glucose", "optimal_range": "70-85 mg/dL", "critical": true},
+        {"name": "HbA1c", "optimal_range": "<5.3%", "critical": true},
+        {"name": "Insulin", "optimal_range": "<5 uIU/mL", "critical": true},
+        {"name": "HOMA-IR", "optimal_range": "<1.5", "critical": true},
+        {"name": "Triglycerides", "optimal_range": "<70 mg/dL", "critical": true},
+        {"name": "HDL-C", "optimal_range": ">60 mg/dL", "critical": false},
+        {"name": "LDL-C", "optimal_range": "<100 mg/dL", "critical": false},
+        {"name": "ApoB", "optimal_range": "<80 mg/dL", "critical": true},
+        {"name": "TSH", "optimal_range": "1.0-2.5 uIU/mL", "critical": true},
+        {"name": "Free T3", "optimal_range": "3.2-4.2 pg/mL", "critical": false},
+        {"name": "Free T4", "optimal_range": "1.0-1.5 ng/dL", "critical": false},
+        {"name": "Vitamin D", "optimal_range": "50-80 ng/mL", "critical": true},
+        {"name": "hsCRP", "optimal_range": "<1.0 mg/L", "critical": true}
+      ]
+    },
+    "advanced": {
+      "frequency": "baseline_and_every_6_months",
+      "markers": [
+        {"name": "Testosterone (Total)", "optimal_range_male": "500-800 ng/dL", "optimal_range_female": "30-70 ng/dL"},
+        {"name": "Testosterone (Free)", "optimal_range_male": "10-20 ng/dL", "optimal_range_female": "1-2 ng/dL"},
+        {"name": "Estradiol", "optimal_range_male": "20-30 pg/mL", "optimal_range_female": "varies_by_phase"},
+        {"name": "DHEA-S", "optimal_range": "350-430 ug/dL (male), 200-350 (female)"},
+        {"name": "Cortisol (AM)", "optimal_range": "10-20 ug/dL"},
+        {"name": "Cortisol (PM)", "optimal_range": "3-10 ug/dL"},
+        {"name": "IGF-1", "optimal_range": "age_adjusted_mid_range"},
+        {"name": "Homocysteine", "optimal_range": "<8 umol/L"},
+        {"name": "ALT", "optimal_range": "<25 U/L"},
+        {"name": "AST", "optimal_range": "<30 U/L"},
+        {"name": "GGT", "optimal_range": "<25 U/L"},
+        {"name": "Uric Acid", "optimal_range": "4.0-6.0 mg/dL"},
+        {"name": "Lp(a)", "optimal_range": "<30 mg/dL"}
+      ]
+    },
+    "optional_advanced": {
+      "frequency": "as_needed",
+      "markers": [
+        "APOE genotype",
+        "CAC score (coronary calcium)",
+        "CIMT (carotid intima-media thickness)",
+        "Omega-3 index",
+        "Methylation markers (SAMe, SAH)",
+        "Advanced glycation end-products (AGEs)"
+      ]
+    }
+  },
+  "intervention_categories": {
+    "nutrition": {
+      "priority": 1,
+      "approaches": [
+        "time_restricted_eating",
+        "carbohydrate_optimization",
+        "protein_prioritization",
+        "healthy_fats",
+        "micronutrient_density",
+        "meal_timing"
+      ]
+    },
+    "exercise": {
+      "priority": 2,
+      "modalities": [
+        "zone_2_cardio",
+        "resistance_training",
+        "hiit",
+        "mobility_flexibility",
+        "balance_training"
+      ]
+    },
+    "sleep": {
+      "priority": 3,
+      "interventions": [
+        "circadian_rhythm_optimization",
+        "sleep_hygiene",
+        "bedroom_environment",
+        "wind_down_routine",
+        "supplements"
+      ]
+    },
+    "stress_management": {
+      "priority": 4,
+      "techniques": [
+        "hrv_training",
+        "meditation",
+        "breathwork",
+        "cold_exposure",
+        "sauna"
+      ]
+    },
+    "supplements": {
+      "priority": 5,
+      "categories": [
+        "foundational",
+        "metabolic_support",
+        "hormone_support",
+        "cognitive_enhancement",
+        "longevity_compounds"
+      ]
+    },
+    "medications": {
+      "priority": 6,
+      "note": "Only when lifestyle interventions insufficient",
+      "considerations": [
+        "metformin",
+        "testosterone_replacement",
+        "thyroid_replacement",
+        "statins",
+        "blood_pressure_medications"
+      ]
+    }
+  },
+  "protocol_templates": {
+    "metabolic_reset": {
+      "duration_days": 90,
+      "focus": "Reverse insulin resistance, optimize glucose regulation",
+      "phases": ["foundation", "optimization", "mastery"],
+      "success_metrics": ["fasting_glucose", "homa_ir", "hba1c", "weight", "energy"]
+    },
+    "hormone_optimization": {
+      "duration_days": 120,
+      "focus": "Restore optimal testosterone, thyroid, cortisol balance",
+      "phases": ["assessment", "intervention", "maintenance"],
+      "success_metrics": ["testosterone", "free_t3", "cortisol_rhythm", "symptoms"]
+    },
+    "cardiovascular_reset": {
+      "duration_days": 90,
+      "focus": "Improve VO2 max, optimize lipids, reduce inflammation",
+      "phases": ["baseline", "training", "refinement"],
+      "success_metrics": ["vo2_max", "blood_pressure", "apob", "hscrp"]
+    },
+    "cognitive_enhancement": {
+      "duration_days": 60,
+      "focus": "Brain health, focus, memory optimization",
+      "phases": ["foundation", "enhancement"],
+      "success_metrics": ["subjective_focus", "memory_tests", "sleep_quality"]
+    },
+    "comprehensive_longevity": {
+      "duration_days": 365,
+      "focus": "All pillars integrated for maximum healthspan",
+      "phases": ["quarter_1", "quarter_2", "quarter_3", "quarter_4"],
+      "success_metrics": ["all_biomarkers", "body_composition", "performance", "quality_of_life"]
+    }
+  },
+  "client_segmentation": {
+    "age_groups": {
+      "young_adult": {
+        "age_range": "25-35",
+        "focus": "Performance, prevention, habit building",
+        "common_goals": ["body_composition", "energy", "cognitive_performance"]
+      },
+      "midlife": {
+        "age_range": "35-50",
+        "focus": "Optimization, risk mitigation, hormone support",
+        "common_goals": ["metabolic_health", "hormone_balance", "cardiovascular_fitness"]
+      },
+      "mature": {
+        "age_range": "50-70",
+        "focus": "Preservation, disease prevention, quality of life",
+        "common_goals": ["chronic_disease_prevention", "muscle_preservation", "cognitive_health"]
+      }
+    },
+    "health_status": {
+      "optimal": "No significant risk factors, maintenance focus",
+      "suboptimal": "1-2 risk factors, targeted interventions",
+      "at_risk": "3+ risk factors or pre-disease state, aggressive intervention",
+      "disease_present": "Diagnosed condition, medical management + lifestyle"
+    }
+  },
+  "tracking_tools": {
+    "wearables": {
+      "cgm": {"recommended": true, "devices": ["Dexcom G7", "Freestyle Libre 3", "Levels"]},
+      "fitness_tracker": {"recommended": true, "devices": ["Whoop", "Oura Ring", "Apple Watch"]},
+      "blood_pressure": {"recommended": true, "devices": ["Omron", "Withings"]},
+      "smart_scale": {"recommended": false, "devices": ["Withings Body+", "Renpho"]}
+    },
+    "lab_testing": {
+      "at_home_kits": ["InsideTracker", "Function Health", "Vessel"],
+      "preferred_labs": ["Quest", "LabCorp", "Marek Health"]
+    },
+    "apps": {
+      "food_tracking": ["Cronometer", "MyFitnessPal"],
+      "habit_tracking": ["Habitica", "Streaks", "Way of Life"],
+      "meditation": ["Headspace", "Calm", "Waking Up"]
+    }
+  },
+  "communication_preferences": {
+    "check_in_frequency": {
+      "phase_1": "weekly",
+      "phase_2": "biweekly",
+      "maintenance": "monthly"
+    },
+    "delivery_methods": ["email", "portal", "text", "video_call"],
+    "educational_content": {
+      "format": ["written_handouts", "videos", "infographics"],
+      "frequency": "weekly_during_active_protocol"
+    }
+  },
+  "pricing_structure": {
+    "initial_consultation": 500,
+    "follow_up_consultation": 200,
+    "protocol_packages": {
+      "90_day_metabolic_reset": 3000,
+      "120_day_hormone_optimization": 4000,
+      "365_day_comprehensive_longevity": 12000
+    },
+    "add_ons": {
+      "cgm_rental_30_days": 150,
+      "dexa_scan": 100,
+      "vo2_max_test": 250,
+      "genetic_testing": 300
+    }
+  },
+  "compliance_strategies": {
+    "habit_stacking": true,
+    "accountability_partnerships": true,
+    "progress_celebrations": true,
+    "education_first": true,
+    "incremental_changes": true,
+    "tracking_tools": true
+  }
+}

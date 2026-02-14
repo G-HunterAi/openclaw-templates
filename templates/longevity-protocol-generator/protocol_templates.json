@@ -1,0 +1,458 @@
+{
+  "metadata": {
+    "template": "Longevity Protocol Generator",
+    "version": "1.0.0",
+    "description": "Evidence-based protocol templates for longevity optimization"
+  },
+  "supplement_stacks": {
+    "foundational": {
+      "description": "Essential supplements for longevity",
+      "supplements": [
+        {
+          "name": "Magnesium Glycinate",
+          "dosage": "400mg",
+          "timing": "before_bed",
+          "benefits": ["Sleep quality", "Insulin sensitivity", "Muscle recovery"],
+          "evidence_level": "strong"
+        },
+        {
+          "name": "Vitamin D3 + K2",
+          "dosage": "5000 IU D3 + 200mcg K2-MK7",
+          "timing": "morning_with_fat",
+          "benefits": ["Immune function", "Bone health", "Cardiovascular health"],
+          "evidence_level": "strong",
+          "target": "50-80 ng/mL blood level"
+        },
+        {
+          "name": "Omega-3 (EPA/DHA)",
+          "dosage": "2-3g combined EPA+DHA",
+          "timing": "with_meals",
+          "benefits": ["Cardiovascular health", "Inflammation reduction", "Brain health"],
+          "evidence_level": "strong",
+          "quality": "Triglyceride form preferred"
+        },
+        {
+          "name": "Creatine Monohydrate",
+          "dosage": "5g",
+          "timing": "anytime_daily",
+          "benefits": ["Muscle mass", "Cognitive function", "Energy production"],
+          "evidence_level": "strong"
+        }
+      ]
+    },
+    "metabolic_support": {
+      "description": "Glucose regulation and insulin sensitivity",
+      "supplements": [
+        {
+          "name": "Berberine",
+          "dosage": "500mg 2x/day",
+          "timing": "with_meals",
+          "benefits": ["Glucose regulation", "Insulin sensitivity", "AMPK activation"],
+          "evidence_level": "strong",
+          "note": "Similar efficacy to metformin"
+        },
+        {
+          "name": "Alpha-Lipoic Acid",
+          "dosage": "600mg",
+          "timing": "morning_fasted",
+          "benefits": ["Glucose disposal", "Antioxidant", "Neuroprotection"],
+          "evidence_level": "moderate"
+        },
+        {
+          "name": "Chromium Picolinate",
+          "dosage": "200-400mcg",
+          "timing": "with_meals",
+          "benefits": ["Insulin sensitivity", "Glucose metabolism"],
+          "evidence_level": "moderate"
+        }
+      ]
+    },
+    "hormone_support": {
+      "description": "Testosterone and hormonal balance",
+      "supplements": [
+        {
+          "name": "Tongkat Ali",
+          "dosage": "300mg",
+          "timing": "morning",
+          "benefits": ["Testosterone support", "Libido", "Stress reduction"],
+          "evidence_level": "moderate",
+          "note": "Look for 10:1 extract"
+        },
+        {
+          "name": "Zinc",
+          "dosage": "30mg",
+          "timing": "before_bed",
+          "benefits": ["Testosterone support", "Immune function"],
+          "evidence_level": "moderate",
+          "caution": "Take with copper (2mg) to prevent deficiency"
+        },
+        {
+          "name": "Boron",
+          "dosage": "6-9mg",
+          "timing": "daily",
+          "benefits": ["Free testosterone increase", "Vitamin D metabolism"],
+          "evidence_level": "moderate"
+        }
+      ]
+    },
+    "longevity_compounds": {
+      "description": "Compounds targeting aging pathways",
+      "supplements": [
+        {
+          "name": "NMN or NR (NAD+ precursor)",
+          "dosage": "250-500mg",
+          "timing": "morning",
+          "benefits": ["Cellular energy", "DNA repair", "Mitochondrial function"],
+          "evidence_level": "emerging",
+          "note": "Human studies ongoing"
+        },
+        {
+          "name": "Resveratrol",
+          "dosage": "500mg",
+          "timing": "morning",
+          "benefits": ["Sirtuin activation", "Cardiovascular health"],
+          "evidence_level": "moderate",
+          "note": "Micronized form for better absorption"
+        },
+        {
+          "name": "Spermidine",
+          "dosage": "1-2mg",
+          "timing": "morning",
+          "benefits": ["Autophagy induction", "Cellular renewal"],
+          "evidence_level": "emerging"
+        },
+        {
+          "name": "Quercetin",
+          "dosage": "500mg",
+          "timing": "daily",
+          "benefits": ["Senolytic properties", "Inflammation reduction"],
+          "evidence_level": "moderate"
+        }
+      ]
+    },
+    "cognitive_enhancement": {
+      "description": "Brain health and cognitive performance",
+      "supplements": [
+        {
+          "name": "Lion's Mane Mushroom",
+          "dosage": "1000mg",
+          "timing": "morning",
+          "benefits": ["NGF production", "Neuroplasticity", "Focus"],
+          "evidence_level": "moderate"
+        },
+        {
+          "name": "L-Theanine",
+          "dosage": "200mg",
+          "timing": "morning_or_with_caffeine",
+          "benefits": ["Focus without jitters", "Stress reduction"],
+          "evidence_level": "moderate"
+        },
+        {
+          "name": "CoQ10 (Ubiquinol)",
+          "dosage": "200mg",
+          "timing": "morning_with_fat",
+          "benefits": ["Mitochondrial function", "Energy production"],
+          "evidence_level": "moderate",
+          "note": "Ubiquinol is more bioavailable"
+        }
+      ]
+    },
+    "sleep_optimization": {
+      "description": "Sleep quality and circadian rhythm support",
+      "supplements": [
+        {
+          "name": "Magnesium Glycinate",
+          "dosage": "400mg",
+          "timing": "1_hour_before_bed",
+          "benefits": ["GABA activation", "Muscle relaxation", "Sleep quality"],
+          "evidence_level": "strong"
+        },
+        {
+          "name": "Glycine",
+          "dosage": "3g",
+          "timing": "before_bed",
+          "benefits": ["Core body temperature reduction", "Sleep quality"],
+          "evidence_level": "moderate"
+        },
+        {
+          "name": "Apigenin",
+          "dosage": "50mg",
+          "timing": "before_bed",
+          "benefits": ["GABA receptor activation", "Anxiety reduction"],
+          "evidence_level": "moderate"
+        },
+        {
+          "name": "L-Theanine",
+          "dosage": "200mg",
+          "timing": "before_bed",
+          "benefits": ["Relaxation", "Sleep onset"],
+          "evidence_level": "moderate"
+        }
+      ]
+    }
+  },
+  "exercise_protocols": {
+    "zone_2_cardio": {
+      "description": "Aerobic base building for metabolic health",
+      "frequency": "4-5x/week",
+      "duration": "45-60 minutes",
+      "intensity": "60-70% max HR (conversational pace)",
+      "benefits": [
+        "Mitochondrial biogenesis",
+        "Fat oxidation",
+        "Insulin sensitivity",
+        "Cardiovascular fitness"
+      ],
+      "modalities": ["Incline walking", "Cycling", "Rowing", "Swimming"],
+      "progressions": {
+        "beginner": "3x30min/week",
+        "intermediate": "4x45min/week",
+        "advanced": "5x60min/week"
+      }
+    },
+    "resistance_training": {
+      "description": "Muscle preservation and strength building",
+      "frequency": "3-4x/week",
+      "duration": "45-60 minutes",
+      "focus": "Compound movements, progressive overload",
+      "benefits": [
+        "Muscle mass preservation",
+        "Bone density",
+        "Metabolic rate",
+        "Glucose disposal"
+      ],
+      "split_options": {
+        "full_body": "3x/week, all major muscle groups",
+        "upper_lower": "4x/week, upper/lower split",
+        "push_pull_legs": "6x/week, advanced only"
+      },
+      "key_exercises": [
+        "Squat (back or front)",
+        "Deadlift",
+        "Bench Press or Push-ups",
+        "Rows (barbell or dumbbell)",
+        "Overhead Press",
+        "Pull-ups or Lat Pulldown"
+      ]
+    },
+    "hiit": {
+      "description": "High-intensity interval training for metabolic flexibility",
+      "frequency": "1-2x/week",
+      "duration": "15-25 minutes",
+      "intensity": "85-95% max HR",
+      "caution": "Only after aerobic base established",
+      "benefits": [
+        "VO2 max improvement",
+        "Metabolic flexibility",
+        "Time efficiency"
+      ],
+      "protocols": {
+        "tabata": "20s work / 10s rest x 8 rounds",
+        "4x4": "4 min work / 3 min rest x 4 rounds",
+        "30_30": "30s work / 30s rest x 10-20 rounds"
+      }
+    },
+    "mobility": {
+      "description": "Joint health and injury prevention",
+      "frequency": "Daily",
+      "duration": "10-20 minutes",
+      "focus": "Dynamic stretching, controlled articular rotations",
+      "benefits": [
+        "Injury prevention",
+        "Movement quality",
+        "Longevity"
+      ],
+      "key_areas": ["Hips", "Shoulders", "Thoracic spine", "Ankles"]
+    }
+  },
+  "nutrition_protocols": {
+    "time_restricted_eating": {
+      "description": "Circadian rhythm aligned eating window",
+      "protocols": {
+        "16_8": {
+          "eating_window": "8 hours",
+          "fasting_window": "16 hours",
+          "example": "12pm-8pm eating, 8pm-12pm fasting",
+          "difficulty": "beginner"
+        },
+        "18_6": {
+          "eating_window": "6 hours",
+          "fasting_window": "18 hours",
+          "example": "12pm-6pm eating",
+          "difficulty": "intermediate"
+        },
+        "20_4": {
+          "eating_window": "4 hours",
+          "fasting_window": "20 hours",
+          "example": "2pm-6pm eating",
+          "difficulty": "advanced"
+        }
+      },
+      "benefits": [
+        "Insulin sensitivity",
+        "Autophagy",
+        "Fat oxidation",
+        "Cellular repair"
+      ]
+    },
+    "macronutrient_targets": {
+      "metabolic_health": {
+        "protein": "30-40%",
+        "carbs": "20-30%",
+        "fat": "30-40%",
+        "protein_grams_per_lb": "0.8-1.0",
+        "focus": "Glucose regulation, insulin sensitivity"
+      },
+      "body_recomposition": {
+        "protein": "35-45%",
+        "carbs": "25-35%",
+        "fat": "25-35%",
+        "protein_grams_per_lb": "1.0-1.2",
+        "focus": "Muscle preservation, fat loss"
+      },
+      "performance": {
+        "protein": "25-30%",
+        "carbs": "40-50%",
+        "fat": "20-30%",
+        "protein_grams_per_lb": "0.8-1.0",
+        "focus": "Energy, recovery, performance"
+      }
+    },
+    "meal_timing": {
+      "protein_distribution": "Evenly distributed across meals (30-40g per meal)",
+      "post_workout_nutrition": "Protein + carbs within 2 hours",
+      "pre_sleep": "Light protein (casein or Greek yogurt) if needed",
+      "fasted_training": "Optional for metabolic flexibility"
+    },
+    "food_quality": {
+      "prioritize": [
+        "Grass-fed/pasture-raised animal products",
+        "Wild-caught fish",
+        "Organic vegetables (especially leafy greens)",
+        "Healthy fats (olive oil, avocado, nuts)",
+        "Low-glycemic carbs (sweet potato, quinoa, berries)"
+      ],
+      "minimize": [
+        "Refined carbs",
+        "Seed oils (canola, soybean, corn)",
+        "Ultra-processed foods",
+        "Added sugars",
+        "Alcohol"
+      ]
+    }
+  },
+  "sleep_protocols": {
+    "circadian_rhythm": {
+      "morning": {
+        "wake_time": "Consistent daily (even weekends)",
+        "sunlight_exposure": "10-30 min within 1 hour of waking",
+        "benefits": "Cortisol awakening response, circadian alignment"
+      },
+      "daytime": {
+        "bright_light": "Maximize natural light exposure",
+        "avoid_naps": "Unless <20 min before 3pm",
+        "caffeine_cutoff": "8-10 hours before bedtime"
+      },
+      "evening": {
+        "dim_lights": "Start dimming 2-3 hours before bed",
+        "blue_light_blocking": "Glasses or screen filters after sunset",
+        "screen_cutoff": "1 hour before bed (ideal)"
+      },
+      "bedtime": {
+        "consistent_time": "Within 30 min window nightly",
+        "wind_down_routine": "30-60 min relaxation ritual",
+        "bedroom_temp": "65-68°F",
+        "darkness": "Blackout curtains, tape over LEDs",
+        "silence": "White noise or earplugs if needed"
+      }
+    },
+    "sleep_hygiene": {
+      "bedroom_optimization": [
+        "Cool temperature (65-68°F)",
+        "Complete darkness",
+        "Quiet or white noise",
+        "Comfortable mattress/pillows",
+        "No screens in bedroom"
+      ],
+      "pre_sleep_routine": [
+        "Hot shower/bath (body temp drop aids sleep)",
+        "Reading (physical book)",
+        "Meditation or breathwork",
+        "Stretching or gentle yoga",
+        "Journaling"
+      ],
+      "avoid": [
+        "Alcohol (disrupts REM sleep)",
+        "Large meals <3 hours before bed",
+        "Intense exercise <3 hours before bed",
+        "Bright lights",
+        "Stressful conversations"
+      ]
+    }
+  },
+  "stress_management": {
+    "hrv_training": {
+      "description": "Heart rate variability biofeedback",
+      "frequency": "Daily (10 min)",
+      "tools": ["Elite HRV", "Whoop", "Oura Ring"],
+      "protocol": "Resonant frequency breathing (5-6 breaths/min)",
+      "benefits": ["Stress resilience", "Autonomic balance", "Recovery"]
+    },
+    "meditation": {
+      "description": "Mindfulness and focused attention",
+      "frequency": "Daily (10-20 min)",
+      "styles": ["Mindfulness", "Transcendental", "Loving-kindness"],
+      "apps": ["Waking Up", "Headspace", "Calm"],
+      "benefits": ["Stress reduction", "Focus", "Emotional regulation"]
+    },
+    "breathwork": {
+      "description": "Controlled breathing for stress management",
+      "techniques": {
+        "box_breathing": "4s in, 4s hold, 4s out, 4s hold (calming)",
+        "4_7_8": "4s in, 7s hold, 8s out (sleep aid)",
+        "wim_hof": "30 rapid breaths + breath hold (energizing)"
+      },
+      "benefits": ["Stress reduction", "Autonomic control", "Oxygenation"]
+    },
+    "cold_exposure": {
+      "description": "Hormetic stress for resilience",
+      "protocols": {
+        "cold_showers": "1-3 min cold water, 2-3x/week",
+        "ice_baths": "3-10 min at 50-55°F, 2-3x/week",
+        "cold_plunge": "Dedicated cold plunge setup"
+      },
+      "benefits": ["Brown fat activation", "Stress resilience", "Inflammation reduction"],
+      "caution": "Build tolerance gradually"
+    },
+    "sauna": {
+      "description": "Heat stress for cardiovascular and longevity benefits",
+      "protocol": "4x20min sessions at 170-200°F per week",
+      "benefits": ["Cardiovascular health", "Detoxification", "Heat shock proteins"],
+      "evidence": "Associated with reduced all-cause mortality"
+    }
+  },
+  "protocol_adjustment_triggers": {
+    "positive_signs": [
+      "Improved biomarkers",
+      "Increased energy",
+      "Better sleep quality",
+      "Weight loss (if goal)",
+      "Improved HRV",
+      "Enhanced mood"
+    ],
+    "negative_signs": [
+      "Declining HRV",
+      "Persistent fatigue",
+      "Sleep disruption",
+      "Mood deterioration",
+      "Injury or pain",
+      "Lack of progress"
+    ],
+    "adjustment_strategies": {
+      "if_progress_stalls": "Increase intervention intensity or add new interventions",
+      "if_overwhelmed": "Simplify protocol, focus on foundational habits",
+      "if_adverse_effects": "Reduce dosages, eliminate problematic interventions",
+      "if_optimal_achieved": "Transition to maintenance protocol"
+    }
+  }
+}
