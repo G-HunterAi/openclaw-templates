@@ -1,0 +1,620 @@
+{
+  "metadata": {
+    "template": "E-commerce Product Researcher",
+    "version": "1.0.0",
+    "description": "Research templates and scoring frameworks for product validation"
+  },
+  "scoring_algorithm": {
+    "total_score": 100,
+    "factors": {
+      "demand": {
+        "weight": 30,
+        "metrics": [
+          {
+            "name": "search_volume",
+            "max_points": 10,
+            "thresholds": {
+              "excellent": {"min": 10000, "points": 10},
+              "good": {"min": 5000, "points": 8},
+              "fair": {"min": 1000, "points": 5},
+              "poor": {"min": 0, "points": 2}
+            }
+          },
+          {
+            "name": "trend_trajectory",
+            "max_points": 10,
+            "values": {
+              "rising_fast": 10,
+              "rising": 8,
+              "stable": 6,
+              "declining": 2,
+              "declining_fast": 0
+            }
+          },
+          {
+            "name": "social_validation",
+            "max_points": 10,
+            "metrics": ["tiktok_views", "instagram_posts", "reddit_mentions"],
+            "calculation": "aggregate_social_score"
+          }
+        ]
+      },
+      "competition": {
+        "weight": 25,
+        "metrics": [
+          {
+            "name": "seller_count",
+            "max_points": 10,
+            "inverse_scoring": true,
+            "thresholds": {
+              "low": {"max": 20, "points": 10},
+              "medium": {"max": 50, "points": 7},
+              "high": {"max": 100, "points": 4},
+              "saturated": {"max": 999999, "points": 1}
+            }
+          },
+          {
+            "name": "market_saturation",
+            "max_points": 8,
+            "calculation": "saturation_index",
+            "inverse_scoring": true
+          },
+          {
+            "name": "barrier_to_entry",
+            "max_points": 7,
+            "factors": ["brand_dominance", "customer_loyalty", "review_count"]
+          }
+        ]
+      },
+      "profitability": {
+        "weight": 25,
+        "metrics": [
+          {
+            "name": "profit_margin",
+            "max_points": 12,
+            "thresholds": {
+              "excellent": {"min": 60, "points": 12},
+              "good": {"min": 40, "points": 10},
+              "fair": {"min": 30, "points": 6},
+              "poor": {"min": 0, "points": 2}
+            }
+          },
+          {
+            "name": "profit_per_sale",
+            "max_points": 8,
+            "thresholds": {
+              "excellent": {"min": 30, "points": 8},
+              "good": {"min": 20, "points": 6},
+              "fair": {"min": 10, "points": 4},
+              "poor": {"min": 0, "points": 1}
+            }
+          },
+          {
+            "name": "pricing_power",
+            "max_points": 5,
+            "factors": ["perceived_value", "competitor_pricing", "uniqueness"]
+          }
+        ]
+      },
+      "differentiation": {
+        "weight": 10,
+        "metrics": [
+          {
+            "name": "uniqueness",
+            "max_points": 5,
+            "evaluation": "product_features_vs_competitors"
+          },
+          {
+            "name": "positioning_opportunity",
+            "max_points": 5,
+            "evaluation": "branding_gaps_in_market"
+          }
+        ]
+      },
+      "risk_assessment": {
+        "weight": 10,
+        "metrics": [
+          {
+            "name": "copyright_risk",
+            "max_points": 3,
+            "inverse_scoring": true,
+            "red_flags": ["trademarked", "patented", "licensed"]
+          },
+          {
+            "name": "quality_risk",
+            "max_points": 3,
+            "factors": ["avg_rating", "return_rate", "complaint_rate"]
+          },
+          {
+            "name": "shipping_complexity",
+            "max_points": 2,
+            "factors": ["fragile", "oversized", "hazardous"]
+          },
+          {
+            "name": "seasonality_risk",
+            "max_points": 2,
+            "evaluation": "demand_consistency"
+          }
+        ]
+      }
+    }
+  },
+  "report_templates": {
+    "trending_product_alert": {
+      "sections": [
+        {
+          "name": "Product Overview",
+          "fields": [
+            "product_name",
+            "category",
+            "current_price",
+            "opportunity_score",
+            "trend_status"
+          ]
+        },
+        {
+          "name": "Market Analysis",
+          "fields": [
+            "monthly_searches",
+            "search_trend",
+            "competition_level",
+            "saturation_score",
+            "social_validation"
+          ]
+        },
+        {
+          "name": "Profitability",
+          "calculations": [
+            {
+              "label": "Supplier Cost",
+              "formula": "base_cost + shipping"
+            },
+            {
+              "label": "Recommended Retail",
+              "formula": "optimal_pricing_algorithm"
+            },
+            {
+              "label": "Profit per Sale",
+              "formula": "retail - (cost + shipping + fees)"
+            },
+            {
+              "label": "Profit Margin %",
+              "formula": "(profit / retail) * 100"
+            },
+            {
+              "label": "Break-even Sales",
+              "formula": "ad_budget / profit_per_sale"
+            }
+          ]
+        },
+        {
+          "name": "Top Competitors",
+          "fields": [
+            "competitor_name",
+            "price",
+            "reviews",
+            "rating",
+            "key_differentiation"
+          ],
+          "limit": 5
+        },
+        {
+          "name": "Differentiation Opportunities",
+          "content": "competitive_gaps_analysis"
+        },
+        {
+          "name": "Recommended Suppliers",
+          "fields": [
+            "supplier_name",
+            "rating",
+            "orders",
+            "price",
+            "shipping_time",
+            "moq"
+          ],
+          "limit": 3
+        },
+        {
+          "name": "Red Flags",
+          "conditional": "if_any_detected",
+          "types": ["copyright", "saturation", "quality", "seasonality"]
+        },
+        {
+          "name": "Launch Strategy",
+          "sections": [
+            "week_1_actions",
+            "week_2_actions",
+            "week_3_actions",
+            "week_4_actions"
+          ]
+        },
+        {
+          "name": "Revenue Projections",
+          "scenarios": ["conservative", "realistic", "aggressive"],
+          "timeframe": "90_days"
+        }
+      ]
+    },
+    "niche_analysis_report": {
+      "sections": [
+        {
+          "name": "Niche Overview",
+          "fields": [
+            "niche_name",
+            "niche_score",
+            "total_market_size",
+            "growth_rate",
+            "competition_level"
+          ]
+        },
+        {
+          "name": "Demand Metrics",
+          "fields": [
+            "total_monthly_searches",
+            "trend_direction",
+            "peak_season",
+            "target_customer_profile",
+            "pain_points",
+            "purchase_triggers"
+          ]
+        },
+        {
+          "name": "Top Product Opportunities",
+          "products": 5,
+          "sort_by": "opportunity_score",
+          "fields": [
+            "product_name",
+            "score",
+            "cost",
+            "retail",
+            "margin",
+            "competition"
+          ]
+        },
+        {
+          "name": "Competitive Landscape",
+          "analysis": [
+            "top_sellers",
+            "pricing_strategies",
+            "marketing_tactics",
+            "customer_feedback_themes"
+          ]
+        },
+        {
+          "name": "Entry Strategy",
+          "content": "recommended_approach_for_niche"
+        }
+      ]
+    },
+    "supplier_comparison": {
+      "template": "comparison_table",
+      "suppliers": 5,
+      "columns": [
+        {
+          "name": "Supplier Name",
+          "field": "name"
+        },
+        {
+          "name": "Rating",
+          "field": "rating",
+          "format": "stars"
+        },
+        {
+          "name": "Orders",
+          "field": "total_orders"
+        },
+        {
+          "name": "Price",
+          "field": "unit_price",
+          "format": "currency"
+        },
+        {
+          "name": "MOQ",
+          "field": "minimum_order_quantity"
+        },
+        {
+          "name": "Shipping Time",
+          "field": "shipping_days",
+          "format": "X-Y days"
+        },
+        {
+          "name": "Shipping Cost",
+          "field": "shipping_cost",
+          "format": "currency"
+        },
+        {
+          "name": "Response Time",
+          "field": "avg_response_hours",
+          "format": "X hours"
+        },
+        {
+          "name": "Custom Branding",
+          "field": "custom_branding_available",
+          "format": "yes_no"
+        },
+        {
+          "name": "Why Choose",
+          "field": "recommendation_reason"
+        }
+      ],
+      "include_negotiation_templates": true
+    },
+    "competitor_analysis": {
+      "sections": [
+        {
+          "name": "Competitor Profile",
+          "fields": [
+            "store_name",
+            "platform",
+            "estimated_monthly_revenue",
+            "product_count",
+            "avg_review_rating"
+          ]
+        },
+        {
+          "name": "Best Selling Products",
+          "products": 10,
+          "fields": [
+            "product",
+            "price",
+            "reviews",
+            "estimated_sales_monthly"
+          ]
+        },
+        {
+          "name": "Pricing Strategy",
+          "analysis": "pricing_patterns_and_psychology"
+        },
+        {
+          "name": "Marketing Tactics",
+          "channels": [
+            "facebook_ads",
+            "tiktok_ads",
+            "instagram_organic",
+            "email_marketing",
+            "influencer_partnerships"
+          ]
+        },
+        {
+          "name": "Product Page Analysis",
+          "elements": [
+            "headline_formula",
+            "bullet_points_structure",
+            "image_count_style",
+            "video_usage",
+            "reviews_strategy"
+          ]
+        },
+        {
+          "name": "Customer Feedback Themes",
+          "positive": "common_praise_points",
+          "negative": "common_complaints"
+        },
+        {
+          "name": "Differentiation Opportunities",
+          "content": "how_to_stand_out_from_this_competitor"
+        }
+      ]
+    }
+  },
+  "validation_checklist": {
+    "pre_launch": [
+      {
+        "step": "Order 3-5 samples",
+        "purpose": "Quality verification",
+        "critical": true
+      },
+      {
+        "step": "Test shipping times",
+        "purpose": "Validate supplier claims",
+        "critical": true
+      },
+      {
+        "step": "Photograph product professionally",
+        "purpose": "High-quality listing images",
+        "critical": true
+      },
+      {
+        "step": "Write product descriptions",
+        "purpose": "SEO-optimized copy",
+        "critical": true
+      },
+      {
+        "step": "Research competitor reviews",
+        "purpose": "Identify product improvements",
+        "critical": false
+      },
+      {
+        "step": "Check trademark database",
+        "purpose": "Avoid copyright issues",
+        "critical": true
+      },
+      {
+        "step": "Calculate all-in costs",
+        "purpose": "Accurate profit projections",
+        "critical": true
+      },
+      {
+        "step": "Set up Facebook pixel",
+        "purpose": "Retargeting preparation",
+        "critical": false
+      }
+    ],
+    "launch": [
+      {
+        "step": "Launch with small budget",
+        "budget": 100,
+        "purpose": "Test product-market fit"
+      },
+      {
+        "step": "Run 3-5 ad variations",
+        "purpose": "Find winning creative"
+      },
+      {
+        "step": "Monitor ROAS daily",
+        "target": 2.0,
+        "purpose": "Profitability check"
+      },
+      {
+        "step": "Respond to all customers",
+        "purpose": "Build early reviews"
+      }
+    ],
+    "scale": [
+      {
+        "step": "Increase budget 20% daily",
+        "condition": "ROAS > 2.5",
+        "purpose": "Controlled scaling"
+      },
+      {
+        "step": "Add more ad creatives",
+        "purpose": "Prevent ad fatigue"
+      },
+      {
+        "step": "Negotiate better supplier pricing",
+        "purpose": "Improve margins"
+      },
+      {
+        "step": "Launch on additional platforms",
+        "purpose": "Diversify traffic sources"
+      }
+    ]
+  },
+  "profitability_calculator": {
+    "inputs": {
+      "product_cost": 0,
+      "shipping_cost": 0,
+      "retail_price": 0,
+      "ad_cost_per_sale": 0,
+      "platform_fees_percent": 0,
+      "payment_processing_percent": 2.9,
+      "payment_processing_flat": 0.30,
+      "refund_rate_percent": 5,
+      "chargeback_rate_percent": 1
+    },
+    "calculations": [
+      {
+        "name": "Total Cost",
+        "formula": "product_cost + shipping_cost"
+      },
+      {
+        "name": "Platform Fees",
+        "formula": "retail_price * (platform_fees_percent / 100)"
+      },
+      {
+        "name": "Payment Processing",
+        "formula": "(retail_price * (payment_processing_percent / 100)) + payment_processing_flat"
+      },
+      {
+        "name": "Gross Profit",
+        "formula": "retail_price - total_cost - platform_fees - payment_processing"
+      },
+      {
+        "name": "Net Profit",
+        "formula": "gross_profit - ad_cost_per_sale"
+      },
+      {
+        "name": "Profit Margin %",
+        "formula": "(net_profit / retail_price) * 100"
+      },
+      {
+        "name": "Break-even Ad Spend",
+        "formula": "gross_profit",
+        "note": "Maximum you can spend on ads per sale to break even"
+      },
+      {
+        "name": "Required Sales (Break-even)",
+        "inputs": "total_ad_budget",
+        "formula": "total_ad_budget / net_profit"
+      }
+    ],
+    "scenarios": {
+      "conservative": {
+        "conversion_rate": 1.0,
+        "avg_order_value_multiplier": 1.0,
+        "monthly_sales": 50
+      },
+      "realistic": {
+        "conversion_rate": 2.0,
+        "avg_order_value_multiplier": 1.2,
+        "monthly_sales": 120
+      },
+      "aggressive": {
+        "conversion_rate": 3.0,
+        "avg_order_value_multiplier": 1.5,
+        "monthly_sales": 250
+      }
+    }
+  },
+  "launch_strategy_framework": {
+    "week_1": {
+      "goal": "Product validation",
+      "budget": "$100-300",
+      "actions": [
+        "Order 5-10 samples from top supplier",
+        "Test shipping times (document actual vs. claimed)",
+        "Create product page (title, description, 5-7 images)",
+        "Set up Facebook pixel + TikTok pixel",
+        "Launch with 3 ad creatives (different hooks)",
+        "Target broad audience (let algorithm learn)",
+        "Monitor CPC, CTR, conversion rate daily"
+      ],
+      "success_metrics": {
+        "ctr": ">2%",
+        "cpc": "<$1.50",
+        "roas": ">1.5"
+      }
+    },
+    "week_2": {
+      "goal": "Find winning creative",
+      "budget": "$300-500",
+      "actions": [
+        "Kill underperforming ads (ROAS < 1.5)",
+        "Double budget on winning ad",
+        "Create 3 new variations of winner",
+        "Test different audiences (interest-based)",
+        "Respond to all customer messages within 2 hours",
+        "Ask happy customers for reviews/photos"
+      ],
+      "success_metrics": {
+        "roas": ">2.0",
+        "conversion_rate": ">2%",
+        "repeat_purchase": ">5%"
+      }
+    },
+    "week_3": {
+      "goal": "Scale profitably",
+      "budget": "$500-1000",
+      "actions": [
+        "Increase budget 20% daily on winners",
+        "Launch lookalike audiences (1%, 2%, 3%)",
+        "Test new platforms (TikTok if started on Facebook)",
+        "Add upsells/bundles to AOV",
+        "Negotiate better supplier pricing (show volume)",
+        "Set up abandoned cart email sequence"
+      ],
+      "success_metrics": {
+        "roas": ">2.5",
+        "aov": "20% increase",
+        "ltv": ">$100"
+      }
+    },
+    "week_4": {
+      "goal": "Diversify & optimize",
+      "budget": "$1000+",
+      "actions": [
+        "Launch on Amazon/Etsy (if applicable)",
+        "Test influencer partnerships (micro-influencers)",
+        "Create email nurture sequence",
+        "Add more products (complementary items)",
+        "Optimize product page (A/B test titles/images)",
+        "Set up Google Shopping ads"
+      ],
+      "success_metrics": {
+        "multi_platform_revenue": ">30%",
+        "customer_acquisition_cost": "decreasing",
+        "profit_margin": "increasing"
+      }
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "metadata": {
+    "template": "E-commerce Product Researcher",
+    "version": "1.0.0",
+    "last_updated": "2026-02-13",
+    "description": "Configuration for automated product research and validation"
+  },
+  "business_info": {
+    "business_model": "dropshipping",
+    "store_platform": "shopify",
+    "experience_level": "intermediate",
+    "monthly_budget": 1000,
+    "target_monthly_revenue": 10000,
+    "current_products": 0,
+    "store_url": "https://yourstore.com"
+  },
+  "product_criteria": {
+    "price_range": {
+      "min": 10,
+      "max": 50,
+      "sweet_spot": 25,
+      "reasoning": "High perceived value, impulse buy range"
+    },
+    "profit_targets": {
+      "min_profit_margin_percent": 30,
+      "target_profit_margin_percent": 50,
+      "min_profit_per_sale_dollars": 10,
+      "target_profit_per_sale_dollars": 20
+    },
+    "competition": {
+      "max_competition_score": 60,
+      "prefer_competition_score": 40,
+      "avoid_saturated_markets": true,
+      "definition_saturated": "100+ sellers, flat trend"
+    },
+    "demand": {
+      "min_demand_score": 50,
+      "prefer_demand_score": 70,
+      "min_monthly_searches": 1000,
+      "trend_requirement": "growing or stable"
+    },
+    "shipping": {
+      "max_shipping_time_days": 21,
+      "prefer_shipping_time_days": 14,
+      "allow_oversized": false,
+      "allow_fragile": false,
+      "allow_liquid": false,
+      "allow_hazardous": false
+    }
+  },
+  "target_marketplaces": {
+    "primary_research": ["amazon", "aliexpress"],
+    "secondary_research": ["tiktok_shop", "etsy", "walmart"],
+    "selling_platforms": ["shopify", "amazon_fba"],
+    "research_frequency": {
+      "trending_products": "daily",
+      "niche_analysis": "weekly",
+      "competitor_monitoring": "weekly"
+    }
+  },
+  "filters": {
+    "avoid_categories": [
+      "Health Supplements",
+      "Electronics",
+      "Pharmaceuticals",
+      "Weapons/Tactical",
+      "Tobacco/Vaping",
+      "Adult Products"
+    ],
+    "prefer_categories": [
+      "Home & Garden",
+      "Pet Supplies",
+      "Kitchen & Dining",
+      "Sports & Outdoors",
+      "Baby Products",
+      "Beauty & Personal Care",
+      "Fashion Accessories",
+      "Hobbies & Crafts"
+    ],
+    "avoid_materials": ["fragile", "liquid", "oversized", "hazardous"],
+    "avoid_brands": ["Apple", "Nike", "Disney", "Marvel"],
+    "preferred_suppliers": {
+      "ratings": ["Gold Medal Plus", "Top Brand"],
+      "min_supplier_rating": 4.5,
+      "min_supplier_orders": 500,
+      "max_response_time_hours": 24
+    }
+  },
+  "research_sources": {
+    "amazon": {
+      "enabled": true,
+      "sections": [
+        "Best Sellers",
+        "Movers & Shakers",
+        "New Releases",
+        "Most Wished For"
+      ],
+      "categories": ["all"]
+    },
+    "aliexpress": {
+      "enabled": true,
+      "sections": ["Trending", "Weekly Deals", "Best Sellers"],
+      "price_filter": "under_30"
+    },
+    "tiktok_shop": {
+      "enabled": true,
+      "track_viral_products": true,
+      "min_views": 100000
+    },
+    "google_trends": {
+      "enabled": true,
+      "regions": ["US", "UK", "CA", "AU"],
+      "time_range": "past_90_days"
+    },
+    "social_media": {
+      "reddit": {
+        "enabled": true,
+        "subreddits": [
+          "shutupandtakemymoney",
+          "ProductPorn",
+          "AmazonDealsUS",
+          "dropship"
+        ]
+      },
+      "instagram": {
+        "enabled": true,
+        "hashtags": ["trending", "newproduct", "gadgets"]
+      }
+    }
+  },
+  "scoring_weights": {
+    "demand": 30,
+    "competition": 25,
+    "profitability": 25,
+    "differentiation": 10,
+    "risk_assessment": 10,
+    "total": 100
+  },
+  "automation_settings": {
+    "daily_trending_scan": {
+      "enabled": true,
+      "time": "08:00 AM",
+      "max_products": 20,
+      "min_score": 60
+    },
+    "niche_deep_dive": {
+      "enabled": true,
+      "frequency": "weekly",
+      "day": "Monday",
+      "niches_per_week": 3
+    },
+    "competitor_monitoring": {
+      "enabled": true,
+      "frequency": "daily",
+      "competitors": [],
+      "alert_on_price_change": true,
+      "alert_on_stock_change": true
+    },
+    "supplier_price_tracking": {
+      "enabled": true,
+      "frequency": "daily",
+      "alert_on_price_drop_percent": 10
+    }
+  },
+  "output_preferences": {
+    "report_format": "markdown",
+    "include_images": true,
+    "include_competitor_analysis": true,
+    "include_supplier_comparison": true,
+    "include_profit_calculator": true,
+    "include_launch_strategy": true,
+    "export_formats": ["csv", "json", "pdf"]
+  },
+  "integrations": {
+    "shopify": {
+      "enabled": false,
+      "api_key": "{SHOPIFY_API_KEY}",
+      "store_url": "{SHOPIFY_STORE_URL}",
+      "auto_import": false
+    },
+    "aliexpress": {
+      "enabled": false,
+      "api_key": "{ALIEXPRESS_API_KEY}",
+      "auto_price_updates": false
+    },
+    "google_sheets": {
+      "enabled": false,
+      "sheet_id": "{GOOGLE_SHEET_ID}",
+      "auto_sync": false
+    },
+    "slack": {
+      "enabled": false,
+      "webhook_url": "{SLACK_WEBHOOK}",
+      "notify_on_hot_product": true
+    }
+  },
+  "red_flags": {
+    "copyright_keywords": [
+      "patented",
+      "trademarked",
+      "licensed",
+      "official",
+      "authentic"
+    ],
+    "avoid_if_detected": true,
+    "saturated_indicators": {
+      "min_sellers": 100,
+      "flat_trend_months": 3,
+      "declining_trend": true
+    },
+    "quality_concerns": {
+      "avg_rating_below": 3.5,
+      "high_return_rate": true,
+      "many_negative_reviews": true
+    }
+  },
+  "launch_strategy_templates": {
+    "fast_launch": {
+      "timeline_days": 7,
+      "sample_order": 3,
+      "initial_inventory": 0,
+      "ad_budget_week_1": 100,
+      "platforms": ["shopify", "facebook_ads"]
+    },
+    "validated_launch": {
+      "timeline_days": 21,
+      "sample_order": 10,
+      "initial_inventory": 50,
+      "ad_budget_week_1": 300,
+      "platforms": ["shopify", "facebook_ads", "tiktok_ads", "google_ads"]
+    },
+    "amazon_fba": {
+      "timeline_days": 45,
+      "sample_order": 5,
+      "initial_inventory": 200,
+      "ad_budget_week_1": 500,
+      "platforms": ["amazon_fba", "amazon_ppc"]
+    }
+  },
+  "notification_preferences": {
+    "hot_product_alert": {
+      "enabled": true,
+      "min_score": 80,
+      "channels": ["email", "slack"]
+    },
+    "price_drop_alert": {
+      "enabled": true,
+      "min_drop_percent": 15,
+      "channels": ["email"]
+    },
+    "trend_warning": {
+      "enabled": true,
+      "alert_on_declining": true,
+      "alert_on_saturation": true,
+      "channels": ["email"]
+    }
+  }
+}
