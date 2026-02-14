@@ -283,8 +283,10 @@
         <div class="cta-section">
             <h2>Get 50% Off Launch Pricing</h2>
             <p>Be the first to access ready-to-deploy OpenClaw agent templates. Save hours of configuration and start automating your business today.</p>
-            <form class="email-form" action="#" method="post">
-                <input type="email" placeholder="Enter your email" required>
+            <form class="email-form" action="https://formspree.io/f/xwpklgev" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="hidden" name="_subject" value="New OpenClaw Template Waitlist Signup">
+                <input type="hidden" name="_next" value="https://g-hunterai.github.io/openclaw-templates/?success=true">
                 <button type="submit">Notify Me</button>
             </form>
             <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">Join 200+ founders on the waitlist. Launch Feb 15, 2026.</p>
@@ -397,8 +399,10 @@
         <div class="cta-section">
             <h2>Launch Special: 50% Off</h2>
             <p style="margin-bottom: 20px;">Early adopters get lifetime 50% discount on all templates. Join the waitlist before Feb 15.</p>
-            <form class="email-form" action="#" method="post">
-                <input type="email" placeholder="Enter your email" required>
+            <form class="email-form" action="https://formspree.io/f/xwpklgev" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="hidden" name="_subject" value="New OpenClaw Template Waitlist Signup">
+                <input type="hidden" name="_next" value="https://g-hunterai.github.io/openclaw-templates/?success=true">
                 <button type="submit">Get Early Access</button>
             </form>
         </div>
@@ -410,15 +414,11 @@
     </div>
     
     <script>
-        // Simple form handling (will integrate with real backend later)
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const email = this.querySelector('input[type="email"]').value;
-                alert('Thanks for your interest! We\'ll notify you when we launch on Feb 15. (This is MVP - real integration coming soon)');
-                // TODO: Integrate with email capture service (ConvertKit, Mailchimp, etc.)
-            });
-        });
+        // Form now submits to Formspree - no JavaScript needed
+        // Success message will show on redirect with ?success=true parameter
+        if (window.location.search.includes('success=true')) {
+            alert('🎉 You\'re on the waitlist! Check your email for confirmation. Launch: Feb 15, 2026.');
+        }
     </script>
 </body>
 </html>
