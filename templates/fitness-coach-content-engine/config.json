@@ -1,0 +1,325 @@
+{
+  "metadata": {
+    "template": "Fitness Coach Content Engine",
+    "version": "1.0.0",
+    "last_updated": "2026-02-13",
+    "description": "Brand configuration for fitness content generation"
+  },
+  "brand": {
+    "coach_name": "Sarah Johnson",
+    "business_name": "Strong Mom Fitness",
+    "tagline": "Empowering busy moms to reclaim their strength",
+    "website": "https://strongmomfitness.com",
+    "niche": "Postpartum fitness & weight loss for busy moms",
+    "target_audience": {
+      "primary": "Women 25-40, postpartum, working moms",
+      "secondary": "Stay-at-home moms looking to get back in shape",
+      "pain_points": [
+        "No time for long workouts",
+        "Lost confidence in their body postpartum",
+        "Overwhelmed by conflicting fitness advice",
+        "Struggling to balance motherhood and self-care"
+      ],
+      "goals": [
+        "Lose baby weight sustainably",
+        "Build strength for daily activities with kids",
+        "Feel confident in their body again",
+        "Create healthy habits the whole family can follow"
+      ]
+    },
+    "brand_voice": {
+      "tone": "Empowering, supportive, no-nonsense",
+      "adjectives": ["authentic", "relatable", "encouraging", "knowledgeable"],
+      "avoid": ["preachy", "judgmental", "overly technical", "shame-based"],
+      "examples": [
+        "REAL TALK: You don't need a perfect plan. You need to START.",
+        "Stop comparing your chapter 1 to someone else's chapter 20.",
+        "Your kids are watching. Show them what strong looks like."
+      ]
+    },
+    "unique_selling_points": [
+      "Former postpartum client turned certified trainer",
+      "10-30 minute workouts designed for busy schedules",
+      "No-shame approach to fitness and nutrition",
+      "Community of 5,000+ strong moms"
+    ]
+  },
+  "platforms": {
+    "instagram": {
+      "enabled": true,
+      "handle": "@strongmomfitness",
+      "followers": 15000,
+      "posting_schedule": {
+        "frequency": "daily",
+        "best_times": ["6:00 AM", "12:00 PM", "7:00 PM"],
+        "time_zone": "America/Los_Angeles"
+      },
+      "content_mix": {
+        "motivational": 30,
+        "educational": 30,
+        "transformation": 20,
+        "community": 20
+      },
+      "post_types": ["static", "carousel", "reels", "stories"]
+    },
+    "tiktok": {
+      "enabled": true,
+      "handle": "@strongmomfitness",
+      "followers": 8000,
+      "posting_schedule": {
+        "frequency": "5x/week",
+        "best_times": ["7:00 AM", "12:00 PM", "9:00 PM"],
+        "time_zone": "America/Los_Angeles"
+      },
+      "content_focus": ["quick_tips", "form_checks", "myths_debunked", "recipes"]
+    },
+    "facebook": {
+      "enabled": true,
+      "page": "Strong Mom Fitness Community",
+      "followers": 3500,
+      "posting_schedule": {
+        "frequency": "5x/week",
+        "best_times": ["9:00 AM", "1:00 PM", "8:00 PM"],
+        "time_zone": "America/Los_Angeles"
+      },
+      "content_focus": ["blog_links", "community_engagement", "long_form_stories"]
+    },
+    "youtube": {
+      "enabled": false,
+      "channel": "Strong Mom Fitness",
+      "subscribers": 1200,
+      "posting_schedule": {
+        "frequency": "2x/week",
+        "days": ["Tuesday", "Friday"],
+        "time": "10:00 AM"
+      }
+    },
+    "email": {
+      "enabled": true,
+      "list_size": 2500,
+      "frequency": "weekly",
+      "send_day": "Tuesday",
+      "send_time": "10:00 AM",
+      "segments": ["new_subscribers", "challenge_participants", "inactive", "vip_clients"]
+    },
+    "blog": {
+      "enabled": true,
+      "frequency": "2x/month",
+      "seo_focus": true,
+      "target_keywords": [
+        "postpartum weight loss",
+        "busy mom workout",
+        "home workouts for moms",
+        "diastasis recti exercises",
+        "lose baby weight"
+      ]
+    }
+  },
+  "content_pillars": [
+    {
+      "name": "Quick Home Workouts",
+      "description": "10-30 minute workouts requiring minimal equipment",
+      "frequency": "2-3x/week",
+      "subtopics": [
+        "Living room HIIT",
+        "Bodyweight circuits",
+        "Resistance band routines",
+        "Core strengthening for moms"
+      ]
+    },
+    {
+      "name": "Healthy Meal Prep for Families",
+      "description": "Simple, nutritious recipes the whole family will eat",
+      "frequency": "2x/week",
+      "subtopics": [
+        "Sheet pan dinners",
+        "Protein-packed breakfasts",
+        "Healthy snacks for kids",
+        "Meal prep Sundays"
+      ]
+    },
+    {
+      "name": "Mom Mindset & Self-Care",
+      "description": "Mental health, motivation, and self-compassion",
+      "frequency": "2x/week",
+      "subtopics": [
+        "Overcoming mom guilt",
+        "Building consistency",
+        "Managing stress",
+        "Self-care isn't selfish"
+      ]
+    },
+    {
+      "name": "Client Transformation Stories",
+      "description": "Real results from real moms in the program",
+      "frequency": "1x/week",
+      "subtopics": [
+        "Before/after photos",
+        "Client testimonials",
+        "Non-scale victories",
+        "Journey spotlights"
+      ]
+    }
+  },
+  "calls_to_action": {
+    "lead_magnets": [
+      {
+        "name": "7-Day Postpartum Meal Plan",
+        "cta": "DM me 'MEALPLAN' for my free 7-day guide",
+        "landing_page": "https://strongmomfitness.com/meal-plan"
+      },
+      {
+        "name": "10-Minute Living Room Workout",
+        "cta": "Link in bio for my FREE 10-min workout video",
+        "landing_page": "https://strongmomfitness.com/free-workout"
+      },
+      {
+        "name": "Postpartum Body Confidence Quiz",
+        "cta": "Take my 2-min quiz (link in bio) to find your best workout plan",
+        "landing_page": "https://strongmomfitness.com/quiz"
+      }
+    ],
+    "program_sales": [
+      {
+        "name": "Strong Mom Challenge (4 weeks)",
+        "cta": "DM me 'READY' to join the next Strong Mom Challenge",
+        "price": 97,
+        "urgency": "Starts Monday - only 20 spots left!"
+      },
+      {
+        "name": "6-Month Transformation Program",
+        "cta": "Link in bio to book your free consultation",
+        "price": 497,
+        "payment_plan": "3 payments of $167"
+      }
+    ],
+    "engagement": [
+      "Comment 💪 if you're committing to this!",
+      "Drop a ❤️ if this resonates with you",
+      "Tag a mom friend who needs to hear this",
+      "Save this for later when you need motivation",
+      "Share this to your stories if you agree!"
+    ],
+    "community": [
+      "Join my FREE Facebook group (link in bio)",
+      "Follow for daily mom fitness tips",
+      "Turn on post notifications so you never miss a workout"
+    ]
+  },
+  "hashtag_strategy": {
+    "branded": ["#StrongMomFitness", "#StrongMomTribe"],
+    "niche": [
+      "#postpartumfitness",
+      "#fitmom",
+      "#momswholift",
+      "#postpartumweightloss",
+      "#momworkout",
+      "#busymomworkout",
+      "#momsofinstagram",
+      "#fitmomlife",
+      "#strongmom",
+      "#postpartumbody"
+    ],
+    "broad": [
+      "#fitnessmotivation",
+      "#homeworkout",
+      "#weightloss",
+      "#healthylifestyle",
+      "#fitnessjourney",
+      "#workoutmotivation",
+      "#strongwomen",
+      "#fitfam"
+    ],
+    "size_mix": {
+      "small": 3,
+      "medium": 4,
+      "large": 3
+    },
+    "max_per_post": 10
+  },
+  "content_preferences": {
+    "use_emojis": true,
+    "tone": "conversational",
+    "paragraph_length": "short",
+    "include_line_breaks": true,
+    "call_to_action_placement": "end",
+    "hashtag_placement": "end_after_linebreak",
+    "mention_style": "casual",
+    "storytelling": "personal_experience_preferred"
+  },
+  "workout_preferences": {
+    "equipment_available": [
+      "dumbbells",
+      "resistance_bands",
+      "yoga_mat",
+      "stability_ball",
+      "kettlebell"
+    ],
+    "workout_duration": {
+      "min": 10,
+      "max": 45,
+      "preferred": 30
+    },
+    "workout_styles": [
+      "HIIT",
+      "circuit_training",
+      "strength_training",
+      "low_impact_cardio",
+      "core_focused"
+    ],
+    "client_levels": ["beginner", "intermediate", "advanced"],
+    "special_considerations": [
+      "diastasis_recti_modifications",
+      "pelvic_floor_safe",
+      "low_impact_options",
+      "no_jumping_modifications"
+    ]
+  },
+  "email_preferences": {
+    "from_name": "Sarah from Strong Mom Fitness",
+    "from_email": "sarah@strongmomfitness.com",
+    "reply_to": "sarah@strongmomfitness.com",
+    "subject_line_style": "benefit_driven",
+    "preview_text": true,
+    "personalization": ["first_name", "join_date", "program_enrolled"],
+    "footer_includes": [
+      "unsubscribe_link",
+      "social_media_links",
+      "contact_info",
+      "physical_address"
+    ]
+  },
+  "analytics_tracking": {
+    "instagram_insights": true,
+    "tiktok_analytics": true,
+    "google_analytics": "UA-XXXXXXXX-X",
+    "facebook_pixel": "XXXXXXXXXXXXXXXXX",
+    "email_opens_clicks": true,
+    "conversion_tracking": [
+      "lead_magnet_downloads",
+      "program_sales",
+      "consultation_bookings",
+      "email_signups"
+    ]
+  },
+  "content_rules": {
+    "never_use": [
+      "Phrases: 'bikini body', 'cheat day', 'guilt-free', 'earn your food'",
+      "Shame-based motivation",
+      "Before/after photos that focus only on weight",
+      "Diet culture language"
+    ],
+    "always_include": [
+      "Disclaimer for postpartum clients (get doctor clearance)",
+      "Modifications for different fitness levels",
+      "Encouragement about non-scale victories",
+      "Community and connection emphasis"
+    ],
+    "brand_guidelines": [
+      "Use inclusive language (all bodies, all fitness levels)",
+      "Focus on strength and health over appearance",
+      "Celebrate small wins and consistency",
+      "Acknowledge the challenges of motherhood"
+    ]
+  }
+}

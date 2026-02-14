@@ -1,0 +1,351 @@
+{
+  "metadata": {
+    "template": "Fitness Coach Content Engine",
+    "version": "1.0.0",
+    "description": "Pre-built templates for social media posts, emails, and fitness content"
+  },
+  "instagram_templates": {
+    "motivational": [
+      {
+        "id": "mot_001",
+        "title": "Progress Not Perfection",
+        "template": "💪 REAL TALK: You don't need a perfect plan.\n\nYou need to START.\n\n✅ {benefit_1}\n✅ {benefit_2}\n✅ {benefit_3}\n\nProgress beats perfection EVERY. SINGLE. TIME.\n\nDrop a {emoji} if you're committing to imperfect action this week!\n\n---\n{hashtags}",
+        "variables": ["benefit_1", "benefit_2", "benefit_3", "emoji", "hashtags"],
+        "example_fill": {
+          "benefit_1": "3 workouts/week > zero workouts",
+          "benefit_2": "80% nutrition > 0% effort",
+          "benefit_3": "10-min walks > sitting all day",
+          "emoji": "💯",
+          "hashtags": "#fitnessmotivation #progressnotperfection"
+        }
+      },
+      {
+        "id": "mot_002",
+        "title": "Comparison Trap",
+        "template": "Stop comparing your chapter 1 to someone else's chapter 20.\n\n📖 Their journey:\n→ {their_backstory}\n\n📖 Your journey:\n→ {your_current_situation}\n\nEveryone starts somewhere. Focus on YOUR progress.\n\n{call_to_action}\n\n---\n{hashtags}",
+        "variables": ["their_backstory", "your_current_situation", "call_to_action", "hashtags"]
+      },
+      {
+        "id": "mot_003",
+        "title": "Your Kids Are Watching",
+        "template": "Your kids are watching.\n\nShow them what {trait} looks like.\n\n💪 They see you wake up early\n💪 They see you choose the workout\n💪 They see you choose yourself\n\nYou're not just changing YOUR life.\nYou're changing theirs.\n\n{call_to_action}\n\n---\n{hashtags}",
+        "variables": ["trait", "call_to_action", "hashtags"],
+        "example_fill": {
+          "trait": "strength",
+          "call_to_action": "Tag a mom who inspires you! 👇"
+        }
+      }
+    ],
+    "educational": [
+      {
+        "id": "edu_001",
+        "title": "Myth Buster",
+        "template": "🚫 MYTH: {myth}\n\n✅ TRUTH: {truth}\n\nHere's why:\n\n{explanation_point_1}\n\n{explanation_point_2}\n\n{explanation_point_3}\n\nThe takeaway: {key_lesson}\n\nQuestions? Drop them below! 👇\n\n---\n{hashtags}",
+        "variables": ["myth", "truth", "explanation_point_1", "explanation_point_2", "explanation_point_3", "key_lesson", "hashtags"],
+        "example_fill": {
+          "myth": "You need to do hours of cardio to lose weight",
+          "truth": "Strength training + calorie deficit is MORE effective",
+          "explanation_point_1": "→ Muscle burns more calories at rest",
+          "explanation_point_2": "→ Strength training preserves muscle during weight loss",
+          "explanation_point_3": "→ Cardio alone can lead to muscle loss + slower metabolism",
+          "key_lesson": "Lift weights, eat in a deficit, add SOME cardio. That's the formula."
+        }
+      },
+      {
+        "id": "edu_002",
+        "title": "Quick Tip",
+        "template": "{number} {topic} TIPS:\n\n1️⃣ {tip_1}\n\n2️⃣ {tip_2}\n\n3️⃣ {tip_3}\n\n4️⃣ {tip_4}\n\n5️⃣ {tip_5}\n\nWhich one are you implementing TODAY? Comment below!\n\nSave this for later 📌\n\n---\n{hashtags}",
+        "variables": ["number", "topic", "tip_1", "tip_2", "tip_3", "tip_4", "tip_5", "hashtags"]
+      },
+      {
+        "id": "edu_003",
+        "title": "Before You Start",
+        "template": "BEFORE YOU START {goal}, DO THIS:\n\n✅ Step 1: {step_1}\n✅ Step 2: {step_2}\n✅ Step 3: {step_3}\n\nSkip these and you'll struggle.\n\nDo these and you'll succeed.\n\nSimple as that.\n\n{call_to_action}\n\n---\n{hashtags}",
+        "variables": ["goal", "step_1", "step_2", "step_3", "call_to_action", "hashtags"]
+      }
+    ],
+    "carousel": [
+      {
+        "id": "car_001",
+        "title": "Multi-Slide Tutorial",
+        "slides": [
+          {
+            "slide": 1,
+            "text": "SWIPE → FOR THE {number} BEST {topic} EXERCISES"
+          },
+          {
+            "slide": 2,
+            "title": "{exercise_1}",
+            "text": "📍 Target: {muscles_1}\n🎯 How to: {instruction_1}\n⚠️ Common mistake: {mistake_1}"
+          },
+          {
+            "slide": 3,
+            "title": "{exercise_2}",
+            "text": "📍 Target: {muscles_2}\n🎯 How to: {instruction_2}\n⚠️ Common mistake: {mistake_2}"
+          },
+          {
+            "slide": 4,
+            "title": "{exercise_3}",
+            "text": "📍 Target: {muscles_3}\n🎯 How to: {instruction_3}\n⚠️ Common mistake: {mistake_3}"
+          },
+          {
+            "slide": 5,
+            "text": "Save this workout! 📌\n\n{call_to_action}\n\n{hashtags}"
+          }
+        ]
+      }
+    ],
+    "transformation": [
+      {
+        "id": "trans_001",
+        "title": "Client Spotlight",
+        "template": "CLIENT SPOTLIGHT: {client_name} 🎉\n\n📊 RESULTS:\n→ {metric_1}\n→ {metric_2}\n→ {metric_3}\n\n💬 IN HER WORDS:\n\"{client_quote}\"\n\nWhat I'm most proud of:\n{non_scale_victory}\n\n🔥 Ready to be our next success story?\n{call_to_action}\n\n---\n{hashtags}",
+        "variables": ["client_name", "metric_1", "metric_2", "metric_3", "client_quote", "non_scale_victory", "call_to_action", "hashtags"]
+      }
+    ],
+    "community": [
+      {
+        "id": "comm_001",
+        "title": "Poll / Question",
+        "template": "QUICK POLL: {question}\n\nA) {option_a}\nB) {option_b}\nC) {option_c}\nD) {option_d}\n\nComment your answer! 👇\n\n{context_or_why_this_matters}\n\n---\n{hashtags}",
+        "variables": ["question", "option_a", "option_b", "option_c", "option_d", "context_or_why_this_matters", "hashtags"]
+      },
+      {
+        "id": "comm_002",
+        "title": "Behind The Scenes",
+        "template": "BEHIND THE SCENES: {what_youre_showing}\n\n{personal_story_or_context}\n\n{lesson_or_takeaway}\n\n{call_to_action}\n\n---\n{hashtags}",
+        "variables": ["what_youre_showing", "personal_story_or_context", "lesson_or_takeaway", "call_to_action", "hashtags"]
+      }
+    ]
+  },
+  "tiktok_scripts": {
+    "quick_tips": [
+      {
+        "id": "tik_001",
+        "title": "Myth Debunk",
+        "duration": "15-30s",
+        "hook": "Stop doing {wrong_thing} if you want {goal}.",
+        "body": "You can't {misconception}. Sorry.\n\nDo THIS instead: {correct_approach}.",
+        "cta": "Follow for real fitness advice. 💪",
+        "on_screen_text": ["Stop wasting time on {wrong_thing}", "{correct_approach} works better"],
+        "variables": ["wrong_thing", "goal", "misconception", "correct_approach"]
+      },
+      {
+        "id": "tik_002",
+        "title": "Quick Form Check",
+        "duration": "30-60s",
+        "hook": "Are you making this {exercise} mistake?",
+        "body": "❌ WRONG: {common_mistake}\n✅ RIGHT: {correct_form}\n\nTry it and let me know how it feels!",
+        "cta": "Follow for more form tips!",
+        "visual": "Split screen: wrong form vs. right form",
+        "variables": ["exercise", "common_mistake", "correct_form"]
+      },
+      {
+        "id": "tik_003",
+        "title": "Recipe Quick Win",
+        "duration": "30-45s",
+        "hook": "{protein}g protein in {time} minutes!",
+        "body": "Ingredients:\n→ {ingredient_1}\n→ {ingredient_2}\n→ {ingredient_3}\n\nMix, cook, done. {calories} calories, {protein}g protein.",
+        "cta": "Save this recipe! 📌",
+        "visual": "Fast-paced cooking montage",
+        "variables": ["protein", "time", "ingredient_1", "ingredient_2", "ingredient_3", "calories"]
+      }
+    ]
+  },
+  "email_templates": {
+    "welcome_sequence": [
+      {
+        "email": 1,
+        "subject": "Welcome to {business_name}! Here's what's next...",
+        "preview_text": "Your free {lead_magnet} is inside + what to expect",
+        "body": "Hi {first_name}! 👋\n\nWelcome to the {business_name} community! I'm SO excited to have you here.\n\nYou just took the first step toward {goal} — and I promise you, this is just the beginning.\n\nHere's what to expect over the next 5 days:\n\n✅ Day 1 (Today): Your free {lead_magnet}\n✅ Day 2: {benefit_day_2}\n✅ Day 3: {benefit_day_3}\n✅ Day 4: {benefit_day_4}\n✅ Day 5: {benefit_day_5}\n\nIn the meantime, here's your first freebie...\n\n[BUTTON: {cta_button_text}]\n\nLet's do this!\n\n{coach_name}\n{business_name}",
+        "variables": ["first_name", "business_name", "goal", "lead_magnet", "benefit_day_2", "benefit_day_3", "benefit_day_4", "benefit_day_5", "cta_button_text", "coach_name"]
+      },
+      {
+        "email": 2,
+        "subject": "{first_name}, here's your {benefit} (as promised)",
+        "preview_text": "{benefit_preview}",
+        "body": "Hey {first_name}!\n\nDay 2! Hope you loved yesterday's {lead_magnet}.\n\nToday I'm sharing {benefit_day_2}.\n\n{content_explanation}\n\n{personal_story_or_tip}\n\n[BUTTON: {cta_button_text}]\n\nSee you tomorrow!\n\n{coach_name}",
+        "variables": ["first_name", "benefit", "benefit_preview", "lead_magnet", "benefit_day_2", "content_explanation", "personal_story_or_tip", "cta_button_text", "coach_name"]
+      }
+    ],
+    "weekly_newsletter": {
+      "subject_lines": [
+        "{first_name}, your weekly {topic} tips are here",
+        "This week's fitness wins + new workout inside",
+        "Quick question: Are you making this mistake?",
+        "Your {day} motivation + this week's workout"
+      ],
+      "template": "Hi {first_name}!\n\nHappy {day}! Here's what I have for you this week:\n\n💪 **WORKOUT OF THE WEEK**\n{workout_description}\n[Link: {workout_link}]\n\n🍎 **NUTRITION TIP**\n{nutrition_tip}\n\n🎉 **COMMUNITY WIN**\n{client_spotlight_or_win}\n\n📚 **THIS WEEK'S READ**\n{blog_article_teaser}\n[Link: {blog_link}]\n\n---\n\nHave a great week, and remember: {motivational_quote}\n\n{coach_name}\n{business_name}\n\nP.S. - {ps_offer_or_reminder}",
+      "variables": ["first_name", "day", "topic", "workout_description", "workout_link", "nutrition_tip", "client_spotlight_or_win", "blog_article_teaser", "blog_link", "motivational_quote", "coach_name", "business_name", "ps_offer_or_reminder"]
+    },
+    "challenge_launch": [
+      {
+        "day": "Day -7",
+        "subject": "🔥 New Challenge Starting {date}",
+        "body": "Hey {first_name}!\n\nI'm launching a {challenge_duration} challenge starting {start_date}.\n\n**What you'll get:**\n→ {benefit_1}\n→ {benefit_2}\n→ {benefit_3}\n\n**Who it's for:** {target_audience}\n\n**Investment:** {price} (or {payment_plan})\n\nOnly {spots_left} spots available.\n\nInterested? Reply 'YES' and I'll send you the details!\n\n{coach_name}"
+      },
+      {
+        "day": "Day -3",
+        "subject": "Only {spots_left} spots left for {challenge_name}!",
+        "body": "Hey {first_name},\n\nQuick heads up: We start in 3 days and there are only {spots_left} spots left.\n\nHere's what you're getting:\n\n{benefit_list}\n\n**Starts:** {start_date}\n**Investment:** {price}\n**Spots:** {spots_left} / {total_spots}\n\nReady to join? Hit reply or click below:\n\n[BUTTON: I'M IN!]\n\n{coach_name}"
+      }
+    ]
+  },
+  "blog_templates": {
+    "how_to_article": {
+      "structure": [
+        {
+          "section": "Introduction",
+          "length": "150-200 words",
+          "elements": ["Hook (problem or question)", "Why this matters", "What reader will learn"]
+        },
+        {
+          "section": "The Problem",
+          "length": "200-300 words",
+          "elements": ["Describe the common struggle", "Why current approaches fail", "Pain points your reader feels"]
+        },
+        {
+          "section": "The Solution Overview",
+          "length": "150-200 words",
+          "elements": ["Introduce your method", "Why it works", "Social proof or science"]
+        },
+        {
+          "section": "Step-by-Step Guide",
+          "length": "800-1000 words",
+          "elements": ["Step 1: [Title] - detailed instructions", "Step 2: [Title] - detailed instructions", "Step 3: [Title] - detailed instructions", "Include examples, images, tips"]
+        },
+        {
+          "section": "Common Mistakes",
+          "length": "200-300 words",
+          "elements": ["Mistake #1 and how to avoid it", "Mistake #2 and how to avoid it", "Mistake #3 and how to avoid it"]
+        },
+        {
+          "section": "Conclusion & CTA",
+          "length": "150-200 words",
+          "elements": ["Recap key points", "Encourage action", "Call-to-action (lead magnet, program, consultation)"]
+        }
+      ],
+      "seo_checklist": [
+        "Target keyword in title",
+        "Target keyword in first 100 words",
+        "H2 and H3 headers with semantic keywords",
+        "Meta description (150-160 characters)",
+        "Alt text on images",
+        "Internal links to related articles",
+        "External links to authoritative sources"
+      ]
+    }
+  },
+  "workout_templates": {
+    "hiit_circuit": {
+      "template_name": "{duration}-Minute HIIT Circuit",
+      "structure": {
+        "warm_up": {
+          "duration": "5 min",
+          "exercises": [
+            "Jumping jacks: 30s",
+            "Arm circles: 30s",
+            "Leg swings: 30s each leg",
+            "Bodyweight squats: 30s",
+            "High knees: 30s",
+            "Dynamic stretching: 2 min"
+          ]
+        },
+        "main_circuit": {
+          "format": "AMRAP (As Many Rounds As Possible)",
+          "duration": "{work_duration} min",
+          "work_rest_ratio": "{work}s work / {rest}s rest",
+          "exercises": [
+            "{exercise_1}: {reps} reps",
+            "{exercise_2}: {reps} reps",
+            "{exercise_3}: {reps} reps",
+            "{exercise_4}: {reps} reps",
+            "{exercise_5}: {reps} reps"
+          ],
+          "rounds": "Complete as many rounds as possible in {work_duration} minutes"
+        },
+        "cool_down": {
+          "duration": "5 min",
+          "exercises": [
+            "Walk/march in place: 2 min",
+            "Quad stretch: 30s each",
+            "Hamstring stretch: 30s each",
+            "Shoulder stretch: 30s each",
+            "Cat-cow stretch: 1 min"
+          ]
+        }
+      },
+      "modifications": {
+        "low_impact": "Remove jumps, march instead of run",
+        "beginner": "Add 10s extra rest between exercises",
+        "advanced": "Reduce rest to 10s, add weights"
+      }
+    },
+    "strength_training": {
+      "template_name": "{split_name} - {target_muscles}",
+      "structure": {
+        "warm_up": "5-10 min cardio + dynamic stretching",
+        "main_lifts": [
+          {
+            "exercise": "{compound_movement_1}",
+            "sets": "{sets}",
+            "reps": "{rep_range}",
+            "rest": "{rest_time}",
+            "notes": "{form_cues_or_tips}"
+          }
+        ],
+        "accessory_work": "3-4 exercises x 3 sets x 12-15 reps",
+        "cool_down": "5-10 min stretching"
+      }
+    }
+  },
+  "video_script_templates": {
+    "youtube_long_form": {
+      "duration": "8-12 minutes",
+      "structure": [
+        {
+          "timestamp": "0:00-0:15",
+          "section": "Hook",
+          "script": "{attention_grabbing_question_or_statement}\n\nIn the next {duration} minutes, I'm going to show you {promise}."
+        },
+        {
+          "timestamp": "0:15-1:00",
+          "section": "Introduction",
+          "script": "Hey! I'm {name}, and if you're {target_audience_description}, you're in the right place.\n\nToday we're talking about {topic}.\n\nBy the end of this video, you'll know {outcome_1}, {outcome_2}, and {outcome_3}."
+        },
+        {
+          "timestamp": "1:00-7:00",
+          "section": "Main Content",
+          "script": "Let's dive in.\n\n[Point 1: {point_1_title}]\n{point_1_explanation}\n\n[Point 2: {point_2_title}]\n{point_2_explanation}\n\n[Point 3: {point_3_title}]\n{point_3_explanation}"
+        },
+        {
+          "timestamp": "7:00-8:00",
+          "section": "Recap & CTA",
+          "script": "Alright, quick recap:\n→ {takeaway_1}\n→ {takeaway_2}\n→ {takeaway_3}\n\nIf you found this helpful, hit that like button and subscribe for more {content_type}.\n\nAnd if you want {lead_magnet_or_offer}, check the link in the description.\n\nSee you in the next one!"
+        }
+      ]
+    },
+    "reels_short_form": {
+      "duration": "15-60 seconds",
+      "hook_templates": [
+        "Stop doing {wrong_thing} if you want {goal}",
+        "You're doing {exercise} wrong. Here's why:",
+        "This {duration}-minute workout burns {calories} calories",
+        "{number} signs you're not eating enough protein",
+        "POV: You finally {achievement}"
+      ],
+      "body_templates": [
+        "The problem: {problem}\nThe fix: {solution}",
+        "Here's what to do instead:\n1. {step_1}\n2. {step_2}\n3. {step_3}",
+        "Why this works:\n→ {reason_1}\n→ {reason_2}\n→ {reason_3}"
+      ],
+      "cta_templates": [
+        "Follow for more {niche} tips",
+        "Save this for later 📌",
+        "Try it and let me know!",
+        "Comment {emoji} if you needed this"
+      ]
+    }
+  }
+}
