@@ -1,0 +1,181 @@
+{
+  "metadata": {
+    "template": "Real Estate Lead Qualifier",
+    "version": "1.0.0",
+    "description": "Response templates for conversation flow, emails, and follow-ups"
+  },
+  "conversation_templates": {
+    "greeting": {
+      "buyer": {
+        "default": "Hi {name}! 👋 I'm here to help you find your perfect home. I'll ask a few quick questions (2-3 minutes) to understand what you're looking for. Ready to get started?",
+        "urgent": "Hi {name}! 👋 I see you're ready to buy soon. Great! Let me ask a few quick questions so I can connect you with the right homes immediately.",
+        "casual": "Hey {name}! Thanks for reaching out. I'd love to help you in your home search. Mind if I ask a few questions to better understand what you're looking for?"
+      },
+      "seller": {
+        "default": "Hi {name}! 👋 Thanks for considering selling your home. I'll ask a few quick questions (2-3 minutes) to understand your situation and goals. Sound good?",
+        "urgent": "Hi {name}! 👋 I see you're ready to sell soon. Perfect! Let me ask a few questions so I can give you the most accurate information about selling your home.",
+        "casual": "Hey {name}! Thinking about selling? Great! Let me ask a few questions to see how I can best help you get top dollar for your property."
+      }
+    },
+    "transitions": {
+      "next_question": [
+        "Got it! Next question:",
+        "Perfect. Now,",
+        "Great! One more thing:",
+        "Thanks! Let me ask:",
+        "Excellent. Quick question:"
+      ],
+      "almost_done": [
+        "Almost done! Just a couple more questions:",
+        "You're doing great! Two more quick ones:",
+        "Last few questions:"
+      ],
+      "final_question": [
+        "Last question:",
+        "One final thing:",
+        "Almost there! Last question:"
+      ]
+    },
+    "acknowledgments": {
+      "positive": [
+        "Perfect! ✅",
+        "Excellent! ✅",
+        "Great to hear! ✅",
+        "That's wonderful! ✅",
+        "Awesome! ✅"
+      ],
+      "neutral": [
+        "Got it 👍",
+        "Understood ✓",
+        "Thanks for sharing",
+        "Noted",
+        "Good to know"
+      ],
+      "empathy": [
+        "I understand",
+        "That makes sense",
+        "I hear you",
+        "Totally get it",
+        "No worries at all"
+      ]
+    },
+    "completion": {
+      "hot_lead": {
+        "buyer": "Amazing! {name}, you sound like you're in a great position to buy. 🎉 {agent_name} is going to LOVE working with you! Expect a call within 15 minutes to discuss properties that match what you're looking for. Talk soon!",
+        "seller": "Fantastic! {name}, your home sounds like it'll do really well on the market. 🎉 {agent_name} will call you within 15 minutes to discuss pricing strategy and next steps. Excited to help you sell!"
+      },
+      "warm_lead": {
+        "buyer": "Great! {name}, I have all the info I need. {agent_name} will reach out within 2 hours to discuss your home search and answer any questions you have. Looking forward to helping you!",
+        "seller": "Perfect! {name}, thanks for all that info. {agent_name} will be in touch within 2 hours to discuss your home sale and provide a market analysis. Talk soon!"
+      },
+      "lukewarm_lead": {
+        "buyer": "Thank you {name}! I've got your information. {agent_name} will follow up via email within 24 hours with some resources and properties that might interest you. Feel free to reach out anytime with questions!",
+        "seller": "Thanks {name}! I've got all your details. {agent_name} will email you within 24 hours with market insights and information about selling your home. We're here when you're ready!"
+      },
+      "cold_lead": {
+        "buyer": "Thanks for your time {name}! I'll add you to our monthly newsletter with new listings and market updates. When you're ready to get more serious about buying, just let us know and we'll be here to help!",
+        "seller": "Thank you {name}! I'll send you our monthly market reports so you can stay informed. When you're closer to selling, reach back out and we'll be happy to help!"
+      }
+    },
+    "clarifications": {
+      "invalid_response": "I didn't quite catch that. Could you clarify?",
+      "missing_required": "This information is important for me to help you best. Could you please answer?",
+      "format_error": "That doesn't look quite right. Could you try again? (Example: {example})"
+    },
+    "exit_options": {
+      "user_exits": "No problem at all! If you change your mind or have questions later, feel free to reach back out. Have a great day! 👋",
+      "too_many_attempts": "I'm having trouble understanding. Would you prefer to have {agent_name} call you directly instead? Or we can try again later!",
+      "disqualified_gentle": "Thanks for your interest {name}! Based on your current situation, I think you might be better served by [alternative resource]. Would you like me to point you in the right direction?"
+    }
+  },
+  "email_templates": {
+    "hot_lead_immediate": {
+      "subject": "{agent_name} | Following up on your {buyer_or_seller} inquiry",
+      "buyer": {
+        "body": "Hi {name},\n\nThank you for taking the time to share your home buying goals with me! I'm excited to help you find the perfect home in {location}.\n\nBased on our conversation:\n- Budget: {budget}\n- Timeline: {timeline}\n- Property type: {property_type}\n\nI've already identified several properties that match what you're looking for. I'll be calling you at {phone} within the next 15 minutes to discuss them.\n\nIn the meantime, here are a few resources:\n- [Link to current listings in your area]\n- [Buyer's guide download]\n- [Mortgage calculator]\n\nLooking forward to speaking with you!\n\nBest,\n{agent_name}\n{agent_title}\n{agent_phone}\n{agent_email}",
+        "attachments": ["buyers_guide.pdf", "pre_approval_checklist.pdf"]
+      },
+      "seller": {
+        "body": "Hi {name},\n\nThank you for considering me to help you sell your home at {property_address}!\n\nBased on our conversation:\n- Timeline: {timeline}\n- Property condition: {condition}\n- Motivation: {motivation}\n\nI'm putting together a preliminary market analysis for your property and will call you at {phone} within 15 minutes to discuss:\n- Current market value estimate\n- Pricing strategy\n- Marketing plan\n- Timeline to get listed\n\nIn the meantime, here are some resources:\n- [Link to recent sales in your neighborhood]\n- [Seller's guide download]\n- [Home prep checklist]\n\nTalk very soon!\n\nBest,\n{agent_name}\n{agent_title}\n{agent_phone}\n{agent_email}",
+        "attachments": ["sellers_guide.pdf", "home_prep_checklist.pdf"]
+      }
+    },
+    "warm_lead_followup": {
+      "subject": "Great to connect, {name}!",
+      "buyer": {
+        "body": "Hi {name},\n\nIt was great chatting with you about your home search! I'm excited to help you find the right home in {location}.\n\nHere's what we discussed:\n- Budget: {budget}\n- Timeline: {timeline}\n- Property preferences: {property_type}\n\nI'll be reaching out within the next 2 hours to:\n- Answer any questions you have\n- Share current listings that match your criteria\n- Discuss the home buying process\n- Set up property tours if you're ready\n\nIn the meantime, I've attached our comprehensive buyer's guide and some listings I think you'll love.\n\nFeel free to call or text me anytime at {agent_phone}.\n\nBest,\n{agent_name}\n{agent_title}\n{agent_phone}\n{agent_email}",
+        "attachments": ["buyers_guide.pdf", "curated_listings.pdf"]
+      },
+      "seller": {
+        "body": "Hi {name},\n\nThanks for sharing information about your home at {property_address}. I'm looking forward to helping you achieve a successful sale!\n\nBased on our conversation:\n- Timeline: {timeline}\n- Property type: {property_type}\n- Goals: {goals}\n\nI'll be in touch within 2 hours to discuss:\n- Market analysis for your property\n- Recommended listing strategy\n- Marketing approach\n- Estimated timeline and process\n\nI've attached our seller's guide and some information about recent sales in your area.\n\nLooking forward to speaking soon!\n\nBest,\n{agent_name}\n{agent_title}\n{agent_phone}\n{agent_email}",
+        "attachments": ["sellers_guide.pdf", "neighborhood_sales_report.pdf"]
+      }
+    },
+    "lukewarm_nurture": {
+      "subject": "Resources for your {buyer_or_seller} journey",
+      "buyer": {
+        "body": "Hi {name},\n\nThanks for reaching out about buying a home in {location}! While I know you're planning to buy in {timeline}, I wanted to share some resources that might be helpful as you explore:\n\n📚 **For You:**\n- Complete Buyer's Guide (attached)\n- Current Market Report for {location}\n- Mortgage Pre-Approval Checklist\n- First-Time Buyer Tips\n\n🏡 **Current Market Snapshot:**\n- Average price in {location}: {avg_price}\n- Average days on market: {avg_days}\n- Inventory levels: {inventory_status}\n\nI'll check in with you in a couple of weeks, but feel free to reach out anytime if you have questions or want to see properties. I'm here to help!\n\nWarm regards,\n{agent_name}\n{agent_title}\n{agent_phone}\n{agent_email}",
+        "attachments": ["buyers_guide.pdf", "market_report.pdf", "pre_approval_checklist.pdf"]
+      },
+      "seller": {
+        "body": "Hi {name},\n\nThanks for your interest in selling your home at {property_address}. While I understand you're planning to sell {timeline}, I wanted to share some resources to help you prepare:\n\n📚 **For You:**\n- Complete Seller's Guide (attached)\n- Home Preparation Checklist\n- Market Trends Report for {location}\n- ROI Guide for Home Improvements\n\n🏡 **Your Neighborhood at a Glance:**\n- Recent sales: {recent_sales_summary}\n- Average sale price: {avg_price}\n- Average time to sell: {avg_days}\n\nI'll stay in touch with monthly market updates. When you're ready to discuss selling seriously, I'm just a call away!\n\nBest regards,\n{agent_name}\n{agent_title}\n{agent_phone}\n{agent_email}",
+        "attachments": ["sellers_guide.pdf", "home_prep_checklist.pdf", "neighborhood_report.pdf"]
+      }
+    },
+    "cold_lead_newsletter": {
+      "subject": "Welcome to {agent_name}'s Market Updates",
+      "body": "Hi {name},\n\nThanks for your interest in {buyer_or_seller} real estate! I'm adding you to my monthly newsletter so you can stay informed about the market in {location}.\n\n**You'll receive:**\n- Monthly market reports and trends\n- New listing alerts (buyers)\n- Home selling tips (sellers)\n- Local community news and events\n- Seasonal home maintenance tips\n\n**In This Month's Edition:**\n- [Current market headline]\n- [Featured listings or sales]\n- [Helpful tip or article]\n\nFeel free to reach out anytime if you have questions or want to discuss your real estate goals. I'm always happy to help!\n\nWarm regards,\n{agent_name}\n{agent_title}\n{agent_phone}\n{agent_email}\n\nP.S. - You can update your preferences or unsubscribe at any time using the links at the bottom of this email.",
+        "frequency": "monthly"
+      }
+    }
+  },
+  "sms_templates": {
+    "hot_lead_immediate": {
+      "buyer": "Hi {name}! This is {agent_first_name} from {brokerage}. Just got your home buying inquiry - you sound like a great buyer! Calling you in 5 min to discuss properties in {location}. 🏡",
+      "seller": "Hi {name}! {agent_first_name} here from {brokerage}. Got your home selling inquiry - excited to help! Calling in 5 min to discuss your home at {short_address}. 📞"
+    },
+    "warm_lead_followup": {
+      "buyer": "Hi {name}, {agent_first_name} from {brokerage}. Thanks for your interest in buying a home! I'll call you within 2 hours to discuss your search. Feel free to text back anytime! 🏡",
+      "seller": "Hi {name}, {agent_first_name} from {brokerage}. Thanks for inquiring about selling! I'll reach out within 2 hours to discuss your home sale. Text me anytime with questions! 📱"
+    },
+    "appointment_confirmation": {
+      "default": "Hi {name}! Confirming our appointment for {date} at {time}. {location_or_phone}. Reply YES to confirm or let me know if you need to reschedule! - {agent_first_name}"
+    },
+    "check_in": {
+      "buyer": "Hi {name}! {agent_first_name} here. Just checking in on your home search. Any questions or ready to see some properties? Text back anytime! 🏡",
+      "seller": "Hi {name}! {agent_first_name} checking in. Any updates on your timeline for selling? Happy to discuss anytime - just text or call! 📞"
+    }
+  },
+  "crm_notes_templates": {
+    "hot_lead": "🔥 HOT LEAD - Priority A\n\nLead Details:\n- Name: {name}\n- Type: {buyer_or_seller}\n- Score: {score}/100\n- Timeline: {timeline}\n- Key Info: {key_details}\n\nNext Steps:\n- [ ] Call within 15 minutes\n- [ ] Send immediate follow-up email\n- [ ] Schedule appointment\n- [ ] Send property matches / CMA\n\nNotes: {agent_notes}",
+    "warm_lead": "⭐ WARM LEAD - Priority B\n\nLead Details:\n- Name: {name}\n- Type: {buyer_or_seller}\n- Score: {score}/100\n- Timeline: {timeline}\n- Key Info: {key_details}\n\nNext Steps:\n- [ ] Call within 2 hours\n- [ ] Send follow-up email\n- [ ] Schedule consultation\n- [ ] Add to weekly follow-up list\n\nNotes: {agent_notes}",
+    "lukewarm_lead": "💛 LUKEWARM LEAD - Priority C\n\nLead Details:\n- Name: {name}\n- Type: {buyer_or_seller}\n- Score: {score}/100\n- Timeline: {timeline}\n- Key Info: {key_details}\n\nNext Steps:\n- [ ] Email within 24 hours\n- [ ] Call within 48 hours\n- [ ] Add to nurture campaign\n- [ ] Follow up next week\n\nNotes: {agent_notes}",
+    "cold_lead": "❄️ COLD LEAD - Priority D\n\nLead Details:\n- Name: {name}\n- Type: {buyer_or_seller}\n- Score: {score}/100\n- Timeline: {timeline}\n- Key Info: {key_details}\n\nNext Steps:\n- [ ] Add to monthly newsletter\n- [ ] Email resources within 3 days\n- [ ] Re-qualify in 90 days\n- [ ] Invite to events\n\nNotes: {agent_notes}"
+  },
+  "variable_definitions": {
+    "name": "Lead's full name",
+    "first_name": "Lead's first name only",
+    "email": "Lead's email address",
+    "phone": "Lead's phone number",
+    "location": "Desired location / neighborhoods",
+    "budget": "Budget range",
+    "timeline": "Purchase/sale timeline",
+    "property_type": "Type of property",
+    "property_address": "Full property address (sellers)",
+    "short_address": "Street address only (sellers)",
+    "condition": "Property condition (sellers)",
+    "motivation": "Selling motivation (sellers)",
+    "score": "Lead qualification score (0-100)",
+    "classification": "hot/warm/lukewarm/cold",
+    "agent_name": "Agent's full name",
+    "agent_first_name": "Agent's first name",
+    "agent_title": "Agent's title/designation",
+    "agent_phone": "Agent's phone number",
+    "agent_email": "Agent's email address",
+    "brokerage": "Brokerage name",
+    "date": "Appointment date",
+    "time": "Appointment time",
+    "key_details": "Summary of important information",
+    "agent_notes": "Custom notes from agent"
+  }
+}

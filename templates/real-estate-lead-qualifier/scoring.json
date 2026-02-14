@@ -1,0 +1,296 @@
+{
+  "metadata": {
+    "template": "Real Estate Lead Qualifier",
+    "version": "1.0.0",
+    "scoring_method": "weighted_points",
+    "max_score": 100,
+    "description": "Scoring algorithm for qualifying real estate buyer and seller leads"
+  },
+  "scoring_config": {
+    "max_score": 100,
+    "passing_score": 60,
+    "scale": {
+      "hot": {"min": 80, "max": 100, "label": "Hot Lead", "priority": "A", "color": "#FF4444"},
+      "warm": {"min": 60, "max": 79, "label": "Warm Lead", "priority": "B", "color": "#FFA500"},
+      "lukewarm": {"min": 40, "max": 59, "label": "Lukewarm Lead", "priority": "C", "color": "#FFD700"},
+      "cold": {"min": 0, "max": 39, "label": "Cold Lead", "priority": "D", "color": "#4169E1"}
+    }
+  },
+  "qualification_criteria": {
+    "buyer": {
+      "critical_factors": [
+        {
+          "question_id": "buyer_financing",
+          "disqualify_if": [],
+          "boost_if": ["pre_approved", "cash_buyer"],
+          "boost_amount": 10
+        },
+        {
+          "question_id": "buyer_agent_relationship",
+          "disqualify_if": ["yes_exclusive"],
+          "note": "Already committed to another agent"
+        }
+      ],
+      "red_flags": [
+        {
+          "condition": "buyer_timeline == 'exploratory' AND buyer_urgency < 4",
+          "penalty": -15,
+          "note": "Not serious buyer"
+        },
+        {
+          "condition": "buyer_financing == 'not_started' AND buyer_timeline == 'immediate'",
+          "penalty": -20,
+          "note": "Unrealistic timeline vs. financing status"
+        }
+      ],
+      "green_flags": [
+        {
+          "condition": "buyer_financing IN ['pre_approved', 'cash_buyer'] AND buyer_timeline IN ['immediate', 'short']",
+          "boost": 15,
+          "note": "Ready to act immediately"
+        },
+        {
+          "condition": "buyer_home_to_sell == 'no' OR buyer_home_listed == 'yes_pending'",
+          "boost": 10,
+          "note": "No contingency concerns"
+        },
+        {
+          "condition": "buyer_urgency >= 8 AND buyer_agent_relationship == 'no_agent'",
+          "boost": 15,
+          "note": "Highly motivated and available"
+        }
+      ]
+    },
+    "seller": {
+      "critical_factors": [
+        {
+          "question_id": "seller_agent_relationship",
+          "disqualify_if": ["yes_exclusive"],
+          "boost_if": ["yes_expired"],
+          "boost_amount": 15,
+          "note": "Previous listing failed - motivated"
+        }
+      ],
+      "red_flags": [
+        {
+          "condition": "seller_timeline == 'exploring' AND seller_urgency < 4",
+          "penalty": -15,
+          "note": "Not serious seller"
+        },
+        {
+          "condition": "seller_motivation == ['testing_market'] AND seller_urgency < 5",
+          "penalty": -20,
+          "note": "Just testing, unlikely to sell"
+        }
+      ],
+      "green_flags": [
+        {
+          "condition": "seller_timeline IN ['asap', '1_3_months'] AND seller_urgency >= 7",
+          "boost": 15,
+          "note": "Highly motivated and ready"
+        },
+        {
+          "condition": "'financial' IN seller_motivation OR 'relocating' IN seller_motivation",
+          "boost": 10,
+          "note": "Strong motivation to sell"
+        },
+        {
+          "condition": "seller_condition IN ['excellent', 'good'] AND seller_ownership == 'owned'",
+          "boost": 12,
+          "note": "Easy transaction, no complications"
+        },
+        {
+          "condition": "seller_next_home IN ['buying_local', 'buying_relocate']",
+          "boost": 8,
+          "note": "Potential buyer client too"
+        }
+      ]
+    }
+  },
+  "scoring_algorithm": {
+    "step_1": {
+      "name": "Calculate Base Score",
+      "method": "Sum all question scores with weights applied",
+      "formula": "base_score = Σ(question_score * question_weight)"
+    },
+    "step_2": {
+      "name": "Apply Critical Factors",
+      "method": "Check for disqualifications and boosts",
+      "actions": [
+        "If disqualified → set final_score = 0, status = 'disqualified'",
+        "If boost conditions met → add boost_amount to base_score"
+      ]
+    },
+    "step_3": {
+      "name": "Apply Red/Green Flags",
+      "method": "Evaluate conditions and adjust score",
+      "actions": [
+        "For each red_flag condition met → subtract penalty",
+        "For each green_flag condition met → add boost"
+      ]
+    },
+    "step_4": {
+      "name": "Normalize Score",
+      "method": "Ensure score is within 0-100 range",
+      "formula": "final_score = min(100, max(0, adjusted_score))"
+    },
+    "step_5": {
+      "name": "Assign Classification",
+      "method": "Map final_score to scale categories",
+      "output": "hot / warm / lukewarm / cold"
+    }
+  },
+  "follow_up_recommendations": {
+    "hot": {
+      "priority": "A",
+      "response_time": "Within 15 minutes",
+      "contact_method": "Phone call immediately",
+      "assignment": "Top-performing agent",
+      "actions": [
+        "Immediate phone contact",
+        "Schedule in-person meeting within 24 hours",
+        "Send property matches (buyers) or CMA (sellers)",
+        "Add to priority follow-up list"
+      ],
+      "cadence": {
+        "day_1": "Phone + Email + Text",
+        "day_2": "Follow-up call if no response",
+        "day_3": "Email with value content",
+        "day_7": "Check-in call",
+        "day_14": "Monthly nurture if still unresponsive"
+      }
+    },
+    "warm": {
+      "priority": "B",
+      "response_time": "Within 2 hours",
+      "contact_method": "Phone call or text",
+      "assignment": "Experienced agent",
+      "actions": [
+        "Phone or text within 2 hours",
+        "Send introduction email with credentials",
+        "Share relevant market insights",
+        "Schedule consultation call"
+      ],
+      "cadence": {
+        "day_1": "Phone/Text + Email",
+        "day_3": "Follow-up call",
+        "day_7": "Email with market update",
+        "day_14": "Check-in call",
+        "monthly": "Nurture emails"
+      }
+    },
+    "lukewarm": {
+      "priority": "C",
+      "response_time": "Within 24 hours",
+      "contact_method": "Email first, then call",
+      "assignment": "Any available agent",
+      "actions": [
+        "Send introduction email within 24 hours",
+        "Follow-up call within 48 hours",
+        "Add to email nurture sequence",
+        "Share educational content"
+      ],
+      "cadence": {
+        "day_1": "Email introduction",
+        "day_2": "Follow-up call",
+        "week_1": "Educational content email",
+        "week_2": "Market update email",
+        "monthly": "Automated nurture sequence"
+      }
+    },
+    "cold": {
+      "priority": "D",
+      "response_time": "Within 3 days",
+      "contact_method": "Email only initially",
+      "assignment": "ISA or automated nurture",
+      "actions": [
+        "Add to long-term nurture campaign",
+        "Send monthly market updates",
+        "Educational email series",
+        "Re-qualify quarterly"
+      ],
+      "cadence": {
+        "week_1": "Welcome email with resources",
+        "monthly": "Market update + educational content",
+        "quarterly": "Re-qualification campaign",
+        "as_needed": "Event invitations (open houses, seminars)"
+      }
+    },
+    "disqualified": {
+      "priority": "X",
+      "response_time": "N/A",
+      "contact_method": "Polite decline email",
+      "assignment": "Automated",
+      "actions": [
+        "Send polite 'not a fit' email",
+        "Offer to refer to another agent if appropriate",
+        "Remove from active follow-up",
+        "Archive lead"
+      ]
+    }
+  },
+  "integration_webhooks": {
+    "hot_lead_alert": {
+      "trigger": "score >= 80",
+      "webhook_url": "{WEBHOOK_URL_HOT}",
+      "payload": {
+        "event": "hot_lead",
+        "lead_data": "{full_lead_object}",
+        "score": "{final_score}",
+        "priority": "A",
+        "timestamp": "{iso_timestamp}"
+      },
+      "notifications": [
+        "SMS to assigned agent",
+        "Slack channel alert",
+        "CRM immediate assignment"
+      ]
+    },
+    "warm_lead": {
+      "trigger": "score >= 60 AND score < 80",
+      "webhook_url": "{WEBHOOK_URL_WARM}",
+      "payload": {
+        "event": "warm_lead",
+        "lead_data": "{full_lead_object}",
+        "score": "{final_score}",
+        "priority": "B",
+        "timestamp": "{iso_timestamp}"
+      }
+    },
+    "all_leads": {
+      "trigger": "always",
+      "webhook_url": "{WEBHOOK_URL_ALL}",
+      "payload": {
+        "event": "lead_captured",
+        "lead_data": "{full_lead_object}",
+        "score": "{final_score}",
+        "classification": "{hot|warm|lukewarm|cold}",
+        "timestamp": "{iso_timestamp}"
+      }
+    }
+  },
+  "reporting_metrics": {
+    "lead_quality_score": {
+      "calculation": "Average score of all leads",
+      "benchmark": 55
+    },
+    "conversion_by_score": {
+      "hot_to_client": "Expected 40-60%",
+      "warm_to_client": "Expected 20-30%",
+      "lukewarm_to_client": "Expected 5-15%",
+      "cold_to_client": "Expected 1-5%"
+    },
+    "response_time_impact": {
+      "within_5_min": "+300% conversion",
+      "within_1_hour": "+100% conversion",
+      "within_24_hours": "baseline",
+      "after_24_hours": "-50% conversion"
+    }
+  },
+  "customization_options": {
+    "adjust_weights": "Modify question_weight values in questions.json",
+    "adjust_thresholds": "Modify score ranges in scale configuration",
+    "add_custom_flags": "Add new conditions to red_flags or green_flags",
+    "integration_endpoints": "Configure webhook URLs for your CRM"
+  }
+}
