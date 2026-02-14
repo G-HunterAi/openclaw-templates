@@ -1,0 +1,306 @@
+{
+  "metadata": {
+    "template": "Social Media Growth Agent",
+    "version": "1.0.0",
+    "description": "Proven growth strategies and tactics for social media"
+  },
+  "viral_content_formulas": {
+    "instagram_reels": [
+      {
+        "name": "Problem-Solution Hook",
+        "formula": "If you [problem], do this: [solution]",
+        "example": "If you can't lose weight, do this: Stop doing cardio and start lifting weights",
+        "effectiveness": "high"
+      },
+      {
+        "name": "Myth-Busting",
+        "formula": "Stop doing [common thing]. Here's why: [explanation]",
+        "example": "Stop doing crunches for abs. Here's why: You can't spot-reduce fat",
+        "effectiveness": "high"
+      },
+      {
+        "name": "List Format",
+        "formula": "[Number] [category] you need to know",
+        "example": "5 exercises that burn more calories than running",
+        "effectiveness": "medium-high"
+      },
+      {
+        "name": "POV / Relatable",
+        "formula": "POV: [relatable scenario]",
+        "example": "POV: You're trying to eat healthy but your family orders pizza",
+        "effectiveness": "medium"
+      }
+    ],
+    "tiktok_hooks": [
+      {
+        "name": "Pattern Interrupt",
+        "hook": "Wait, what?! [shocking statement]",
+        "retention": "Stops scroll within 1 second",
+        "example": "Wait, what?! This burns more fat than cardio"
+      },
+      {
+        "name": "Direct Address",
+        "hook": "If you [identity], watch this",
+        "retention": "High relevance = longer watch time",
+        "example": "If you're over 40 and want to lose belly fat, watch this"
+      },
+      {
+        "name": "Curiosity Gap",
+        "hook": "The thing about [topic] nobody tells you",
+        "retention": "Mystery drives completion",
+        "example": "The thing about protein nobody tells you"
+      }
+    ],
+    "twitter_threads": [
+      {
+        "name": "Contrarian Take",
+        "formula": "Unpopular opinion: [statement]. Here's why...",
+        "engagement": "High debate/quote-tweets"
+      },
+      {
+        "name": "Lessons Learned",
+        "formula": "[Number] lessons from [experience/timeframe]",
+        "engagement": "High saves/bookmarks"
+      },
+      {
+        "name": "How I Did It",
+        "formula": "How I [achievement] in [timeframe]: [step-by-step]",
+        "engagement": "High engagement + profile visits"
+      }
+    ]
+  },
+  "growth_tactics": {
+    "follow_unfollow": {
+      "description": "Strategic following to attract ideal audience",
+      "steps": [
+        "Identify competitor accounts with 10K-100K followers",
+        "Follow their engaged followers (people who comment frequently)",
+        "Follow 50-100 people per day",
+        "Unfollow non-followers after 7 days",
+        "Maintain follow ratio <2:1 (following:followers)"
+      ],
+      "expected_results": "20-30% follow-back rate, 500-1000 followers/month",
+      "caution": "Don't exceed platform limits (Instagram: ~200 follows/day)"
+    },
+    "engagement_pods": {
+      "description": "Mutual engagement groups for algorithm boost",
+      "how_to_find": [
+        "Telegram groups for your niche",
+        "Instagram DM pods (15-30 people)",
+        "Facebook groups for creators"
+      ],
+      "rules": [
+        "Engage within 1 hour of posting",
+        "Leave thoughtful comments (not generic)",
+        "Share stories when asked",
+        "Don't spam or abuse"
+      ],
+      "expected_results": "2-3x engagement boost in first hour (algorithm signals)"
+    },
+    "dm_outreach": {
+      "description": "Direct messaging for collaborations and networking",
+      "templates": {
+        "collaboration": "Hey {name}! Love your content on {topic}. I think our audiences would benefit from a collab. Interested in a shoutout exchange or IG Live?",
+        "value_add": "Hey {name}! Saw your question about {topic} in your story. I actually have a guide on this - want me to send it over?",
+        "networking": "Hey {name}! Fellow {niche} creator here. Would love to connect and support each other's growth!"
+      },
+      "expected_results": "10-20% response rate, 1-2 collabs/month"
+    },
+    "story_engagement": {
+      "description": "Use stories to boost engagement and visibility",
+      "tactics": [
+        "Ask questions daily (question sticker)",
+        "Post polls 3-4x/week (easy engagement)",
+        "Share user-generated content (builds community)",
+        "Behind-the-scenes content (authenticity)",
+        "Countdown stickers for launches"
+      ],
+      "expected_results": "30-50% story engagement rate, higher profile visits"
+    },
+    "carousel_posting": {
+      "description": "Multi-slide posts for saves and engagement",
+      "why_it_works": "Instagram favors saves (signal of quality content)",
+      "formula": [
+        "Slide 1: Attention-grabbing title",
+        "Slides 2-9: Valuable tips/info",
+        "Slide 10: CTA (save, share, comment)"
+      ],
+      "best_topics": [
+        "How-to guides",
+        "Lists (10 tips, 5 mistakes, etc.)",
+        "Before/after comparisons",
+        "Myth vs. fact"
+      ],
+      "expected_results": "3-5x saves vs. single image, algorithmic boost"
+    }
+  },
+  "platform_specific": {
+    "instagram": {
+      "algorithm_factors": [
+        "Engagement in first hour (comments, saves, shares)",
+        "Watch time on Reels",
+        "Story completion rate",
+        "Profile visits",
+        "DM conversations"
+      ],
+      "growth_hacks": [
+        "Post Reels using trending audio within 48 hours of trend",
+        "Share Reels to stories immediately after posting",
+        "Reply to all comments within first hour",
+        "Use all 30 hashtags (mix of sizes)",
+        "Tag location for local discovery"
+      ],
+      "optimal_posting": {
+        "frequency": "1-2 Reels/day + 1 story series",
+        "best_times": ["7-9 AM", "12-1 PM", "7-9 PM"],
+        "worst_times": ["2-5 AM", "10-11 AM"]
+      }
+    },
+    "tiktok": {
+      "algorithm_factors": [
+        "Watch time (most important)",
+        "Completion rate",
+        "Rewatches",
+        "Shares (huge signal)",
+        "Comments and likes"
+      ],
+      "growth_hacks": [
+        "Hook within first 1 second (stop the scroll)",
+        "Keep videos <30 seconds for completion rate",
+        "Post 2-3x/day during growth phase",
+        "Use trending sounds within 24 hours",
+        "Engage in comments (boosts visibility)"
+      ],
+      "optimal_posting": {
+        "frequency": "2-4x/day",
+        "best_times": ["6-9 AM", "12-1 PM", "7-11 PM"],
+        "consistency": "More important than perfection"
+      }
+    },
+    "twitter": {
+      "algorithm_factors": [
+        "Engagement rate (replies, retweets, likes)",
+        "Click-through rate on links",
+        "Time spent reading thread",
+        "Profile visits",
+        "Follow actions"
+      ],
+      "growth_hacks": [
+        "Reply to big accounts within first 10 minutes",
+        "Quote tweet with valuable add-on (not just retweet)",
+        "Post threads on Sundays (higher engagement)",
+        "Use line breaks for readability",
+        "Ask questions to drive replies"
+      ],
+      "optimal_posting": {
+        "frequency": "5-10 tweets/day",
+        "best_times": ["7-9 AM", "12-1 PM", "5-6 PM EST"],
+        "thread_day": "Sunday mornings"
+      }
+    },
+    "linkedin": {
+      "algorithm_factors": [
+        "Dwell time (how long people read)",
+        "Engagement rate",
+        "Shares (most important)",
+        "Profile views after post",
+        "Comments (especially from connections)"
+      ],
+      "growth_hacks": [
+        "Post Monday-Friday 7-9 AM or 12-1 PM",
+        "Start with a hook (no fluff)",
+        "Use short paragraphs (2-3 lines max)",
+        "Ask for engagement at end (comment, share)",
+        "Comment on posts from bigger accounts"
+      ],
+      "optimal_posting": {
+        "frequency": "3-5x/week",
+        "best_days": ["Tuesday", "Wednesday", "Thursday"],
+        "best_times": ["7-9 AM", "12-1 PM"]
+      }
+    }
+  },
+  "content_calendar_framework": {
+    "weekly_structure": {
+      "monday": {
+        "theme": "Motivation / Week kickoff",
+        "content_type": "Reel or carousel",
+        "cta": "Set your goals for the week"
+      },
+      "tuesday": {
+        "theme": "Educational / How-to",
+        "content_type": "Carousel or video tutorial",
+        "cta": "Save this for later"
+      },
+      "wednesday": {
+        "theme": "Behind-the-scenes / Personal",
+        "content_type": "Story series or feed post",
+        "cta": "Ask me anything"
+      },
+      "thursday": {
+        "theme": "Tips / Quick wins",
+        "content_type": "Reel or list format",
+        "cta": "Try this and let me know"
+      },
+      "friday": {
+        "theme": "Community / UGC",
+        "content_type": "Client spotlight or challenge",
+        "cta": "Tag a friend who needs this"
+      },
+      "saturday": {
+        "theme": "Entertainment / Relatable",
+        "content_type": "Funny Reel or meme format",
+        "cta": "Like if you relate"
+      },
+      "sunday": {
+        "theme": "Inspirational / Reflection",
+        "content_type": "Transformation story or quote",
+        "cta": "What's your goal for next week?"
+      }
+    }
+  },
+  "collaboration_strategies": {
+    "shoutout_exchange": {
+      "how_to": "Partner with account of similar size, post to stories",
+      "best_match": "Complementary niche (not direct competitor)",
+      "expected_result": "100-500 new followers per shoutout"
+    },
+    "instagram_live": {
+      "how_to": "Go live together, cross-promote to both audiences",
+      "best_format": "Q&A, interview, or challenge",
+      "expected_result": "200-1000 new followers + engagement boost"
+    },
+    "content_collaboration": {
+      "how_to": "Create content together (Reel collab, carousel)",
+      "best_format": "Split-screen Reel or joint tutorial",
+      "expected_result": "Exposure to new audience + viral potential"
+    },
+    "giveaway": {
+      "how_to": "Partner with 2-5 accounts, require follow all + tag friends",
+      "prize": "$100-500 value (related to niche)",
+      "expected_result": "500-5000 new followers (depends on prize/partners)",
+      "caution": "May have lower retention rate"
+    }
+  },
+  "advanced_tactics": {
+    "micro_influencer_partnerships": {
+      "target": "Accounts with 5K-50K followers in your niche",
+      "offer": "Free product/service in exchange for post",
+      "expected_roi": "10:1 (spend $100, gain 1000 followers)"
+    },
+    "user_generated_content": {
+      "strategy": "Feature client content weekly",
+      "benefits": ["Social proof", "Community building", "Content variety"],
+      "how_to": "Create branded hashtag, ask permission to repost"
+    },
+    "content_series": {
+      "examples": [
+        "Motivation Monday",
+        "Transformation Tuesday",
+        "Workout Wednesday"
+      ],
+      "benefits": "Predictability = consistency = algorithm loves it",
+      "retention": "Followers come back for series"
+    }
+  }
+}

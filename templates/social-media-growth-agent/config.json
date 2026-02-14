@@ -1,0 +1,238 @@
+{
+  "metadata": {
+    "template": "Social Media Growth Agent",
+    "version": "1.0.0",
+    "last_updated": "2026-02-14",
+    "description": "Configuration for automated social media growth across multiple platforms"
+  },
+  "accounts": [
+    {
+      "platform": "instagram",
+      "handle": "@yourhandle",
+      "niche": "fitness",
+      "current_followers": 5000,
+      "goals": [
+        "grow_to_10k",
+        "increase_engagement_rate_to_5_percent",
+        "drive_website_traffic"
+      ],
+      "posting_frequency": {
+        "feed_posts": "3x/week",
+        "reels": "5x/week",
+        "stories": "daily",
+        "carousels": "2x/week"
+      },
+      "best_posting_times": ["7:00 AM", "12:00 PM", "6:00 PM"]
+    }
+  ],
+  "target_audience": {
+    "niche": "Busy professionals who want to get fit",
+    "demographics": {
+      "age_range": "30-50",
+      "gender": "women",
+      "location": "US, Canada, UK, Australia",
+      "income_level": "middle_to_upper"
+    },
+    "interests": [
+      "home workouts",
+      "meal prep",
+      "work-life balance",
+      "healthy habits",
+      "productivity"
+    ],
+    "pain_points": [
+      "No time for gym",
+      "Don't know where to start",
+      "Need accountability",
+      "Struggle with consistency"
+    ],
+    "aspirations": [
+      "Feel confident in their body",
+      "Have more energy",
+      "Set good example for family",
+      "Live longer, healthier life"
+    ]
+  },
+  "competitor_accounts": {
+    "instagram": [
+      "@kayla_itsines",
+      "@blogilates",
+      "@sweat",
+      "@toneitup"
+    ],
+    "tiktok": [
+      "@madfit",
+      "@growwithjo"
+    ],
+    "twitter": [
+      "@BenBergeron",
+      "@MikeTNelson"
+    ]
+  },
+  "content_pillars": [
+    {
+      "name": "Workout Tips",
+      "percentage": 40,
+      "content_types": ["Reels", "Carousels", "Stories"],
+      "themes": [
+        "Quick home workouts",
+        "Exercise form tips",
+        "Equipment-free exercises",
+        "Workout modifications"
+      ]
+    },
+    {
+      "name": "Nutrition Advice",
+      "percentage": 30,
+      "content_types": ["Carousels", "Reels", "Stories"],
+      "themes": [
+        "Meal prep hacks",
+        "Healthy swaps",
+        "Protein-rich meals",
+        "Meal planning"
+      ]
+    },
+    {
+      "name": "Transformation & Results",
+      "percentage": 20,
+      "content_types": ["Feed posts", "Reels", "Stories"],
+      "themes": [
+        "Client transformations",
+        "Progress updates",
+        "Non-scale victories",
+        "Journey spotlights"
+      ]
+    },
+    {
+      "name": "Promotional",
+      "percentage": 10,
+      "content_types": ["Stories", "Feed posts"],
+      "themes": [
+        "Program launches",
+        "Free resources",
+        "Testimonials",
+        "Limited offers"
+      ]
+    }
+  ],
+  "engagement_strategy": {
+    "daily_targets": {
+      "likes": 100,
+      "comments": 20,
+      "dms": 10,
+      "story_views": 50
+    },
+    "target_accounts": {
+      "follower_range": "1K-50K",
+      "engagement_rate_min": 2.0,
+      "find_via": [
+        "competitor_followers",
+        "niche_hashtags",
+        "location_tags",
+        "suggested_accounts"
+      ]
+    },
+    "commenting_rules": {
+      "min_words": 5,
+      "avoid_generic": true,
+      "add_value": true,
+      "include_question": "sometimes",
+      "use_emojis": "moderately"
+    },
+    "dm_sequences": {
+      "new_follower": {
+        "delay": "24_hours",
+        "message": "Hey {name}! Thanks for following. What brings you to my page? 😊"
+      },
+      "engaged_user": {
+        "trigger": "3_comments_or_likes",
+        "message": "Hey {name}! I noticed you've been engaging with my content. Appreciate you! What's your biggest fitness goal right now?"
+      },
+      "inactive_follower": {
+        "trigger": "30_days_no_engagement",
+        "message": "Hey {name}! Haven't seen you around lately. Everything okay? Let me know if you need any fitness advice! 💪"
+      }
+    }
+  },
+  "content_calendar_settings": {
+    "planning_horizon_days": 30,
+    "buffer_days": 3,
+    "content_mix": {
+      "educational": 50,
+      "entertaining": 30,
+      "inspirational": 15,
+      "promotional": 5
+    },
+    "hashtag_strategy": {
+      "total_per_post": 30,
+      "breakdown": {
+        "branded": 2,
+        "niche_specific": 15,
+        "broad": 10,
+        "trending": 3
+      }
+    }
+  },
+  "analytics_tracking": {
+    "metrics": [
+      "follower_growth",
+      "engagement_rate",
+      "reach",
+      "impressions",
+      "profile_visits",
+      "website_clicks",
+      "story_views",
+      "reel_plays"
+    ],
+    "reporting_frequency": "weekly",
+    "benchmarks": {
+      "engagement_rate_target": 5.0,
+      "follower_growth_monthly": 1000,
+      "story_view_rate": 30.0,
+      "reel_avg_views": 5000
+    }
+  },
+  "automation_rules": {
+    "auto_like": {
+      "enabled": true,
+      "daily_limit": 100,
+      "target_hashtags": ["#fitness", "#workout", "#healthylifestyle"],
+      "delay_between_actions_seconds": 30
+    },
+    "auto_comment": {
+      "enabled": true,
+      "daily_limit": 20,
+      "use_ai_generation": true,
+      "min_comment_length": 10
+    },
+    "auto_follow": {
+      "enabled": true,
+      "daily_limit": 50,
+      "follow_back_rate_min": 30,
+      "unfollow_after_days": 7
+    },
+    "auto_unfollow": {
+      "enabled": true,
+      "daily_limit": 50,
+      "unfollow_non_followers_only": true,
+      "exclude_verified": true
+    }
+  },
+  "safety_settings": {
+    "rate_limiting": {
+      "enabled": true,
+      "actions_per_hour_max": 50,
+      "rest_periods": ["2-4 AM", "during_peak_usage"]
+    },
+    "spam_prevention": {
+      "vary_timing": true,
+      "randomize_order": true,
+      "avoid_repetitive_comments": true
+    },
+    "account_protection": {
+      "monitor_shadowban_indicators": true,
+      "pause_if_suspicious_activity": true,
+      "backup_content_locally": true
+    }
+  }
+}
