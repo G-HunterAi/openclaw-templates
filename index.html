@@ -152,6 +152,22 @@
             margin-top: 10px;
         }
         
+        .buy-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+        
+        .buy-button:hover {
+            background: #5568d3;
+        }
+        
         .email-form {
             display: flex;
             gap: 10px;
@@ -260,7 +276,7 @@
 <body>
     <div class="container">
         <header>
-            <div class="launch-badge">🚀 Launching February 15, 2026</div>
+            <div class="launch-badge">✅ Now Available</div>
             <h1>Pre-Built AI Agents for Your Business</h1>
             <p class="subtitle">Automate real estate, fitness coaching, e-commerce, and more in minutes—not weeks</p>
             
@@ -281,15 +297,10 @@
         </header>
         
         <div class="cta-section">
-            <h2>Get 50% Off Launch Pricing</h2>
-            <p>Be the first to access ready-to-deploy OpenClaw agent templates. Save hours of configuration and start automating your business today.</p>
-            <form class="email-form" action="https://formspree.io/f/xwpklgev" method="POST">
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <input type="hidden" name="_subject" value="New OpenClaw Template Waitlist Signup">
-                <input type="hidden" name="_next" value="https://g-hunterai.github.io/openclaw-templates/?success=true">
-                <button type="submit">Notify Me</button>
-            </form>
-            <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">Join 200+ founders on the waitlist. Launch Feb 15, 2026.</p>
+            <h2>🎉 Now Available</h2>
+            <p>Ready-to-deploy OpenClaw agent templates. Save hours of configuration and start automating your business today.</p>
+            <p style="margin-top: 20px; margin-bottom: 20px; font-size: 1.2rem; font-weight: 600; color: #667eea;">Browse templates below 👇</p>
+            <p style="font-size: 0.9rem; color: #666;">Lifetime access + updates. No monthly fees.</p>
         </div>
         
         <div class="benefits">
@@ -331,62 +342,62 @@
         </div>
         
         <div class="templates-preview">
-            <h2>Available Templates (Launching Feb 15)</h2>
+            <h2>Available Templates</h2>
             <p style="text-align: center; margin-bottom: 30px; color: #666;">Pre-configured OpenClaw agents that solve real business problems</p>
             
             <div class="template-grid">
                 <div class="template-card">
                     <h4>🏡 Real Estate Lead Qualifier</h4>
-                    <div class="price">$97</div>
+                    <div class="price">$197</div>
                     <p>Auto-screens MLS leads, qualifies via SMS/email, schedules showings, updates CRM.</p>
                     <div class="tag">Real Estate</div>
                     <div class="tag">Lead Gen</div>
-                    <p class="coming-soon">Coming Feb 15</p>
+                    <a href="#contact" class="buy-button">Buy Now</a>
                 </div>
                 
                 <div class="template-card">
                     <h4>💪 Fitness Coach Content Engine</h4>
-                    <div class="price">$67</div>
+                    <div class="price">$147</div>
                     <p>Weekly content calendar, Instagram/TikTok posts, client check-ins, workout plans.</p>
                     <div class="tag">Fitness</div>
                     <div class="tag">Content</div>
-                    <p class="coming-soon">Coming Feb 15</p>
+                    <a href="#contact" class="buy-button">Buy Now</a>
                 </div>
                 
                 <div class="template-card">
                     <h4>🛍️ E-commerce Product Researcher</h4>
-                    <div class="price">$77</div>
+                    <div class="price">$97</div>
                     <p>Scrapes Amazon/Etsy best sellers, generates supplier lists, analyzes competition.</p>
                     <div class="tag">E-commerce</div>
                     <div class="tag">Research</div>
-                    <p class="coming-soon">Coming Feb 15</p>
+                    <a href="#contact" class="buy-button">Buy Now</a>
                 </div>
                 
                 <div class="template-card">
                     <h4>🧬 Longevity Protocol Generator</h4>
-                    <div class="price">$87</div>
+                    <div class="price">$197</div>
                     <p>Input biomarkers → personalized protocols. Supplement recs, lifestyle optimization, progress tracking.</p>
                     <div class="tag">Health</div>
                     <div class="tag">Longevity</div>
-                    <p class="coming-soon">Coming Feb 15</p>
+                    <a href="#contact" class="buy-button">Buy Now</a>
                 </div>
                 
                 <div class="template-card">
                     <h4>📱 Social Media Growth Agent</h4>
-                    <div class="price">$57</div>
+                    <div class="price">$97</div>
                     <p>Auto-engages with niche hashtags, schedules posts, tracks analytics, DM automation.</p>
                     <div class="tag">Marketing</div>
                     <div class="tag">Social</div>
-                    <p class="coming-soon">Coming Feb 15</p>
+                    <a href="#contact" class="buy-button">Buy Now</a>
                 </div>
                 
                 <div class="template-card">
                     <h4>🎯 Complete Industry Bundles</h4>
-                    <div class="price">$197-$297</div>
+                    <div class="price">$397</div>
                     <p>5-agent suites for real estate, fitness, e-commerce. Save 40% vs individual.</p>
                     <div class="tag">Bundle</div>
                     <div class="tag">Best Value</div>
-                    <p class="coming-soon">Coming Feb 15</p>
+                    <a href="#contact" class="buy-button">Buy Now</a>
                 </div>
             </div>
         </div>
@@ -396,15 +407,17 @@
             <p style="max-width: 800px; margin: 0 auto;">OpenClaw has 15,000+ daily installs and 3,000+ community skills—but no pre-configured agent templates... until now. Be among the first to access professionally built, battle-tested automation.</p>
         </div>
         
-        <div class="cta-section">
-            <h2>Launch Special: 50% Off</h2>
-            <p style="margin-bottom: 20px;">Early adopters get lifetime 50% discount on all templates. Join the waitlist before Feb 15.</p>
+        <div class="cta-section" id="contact">
+            <h2>Ready to Automate?</h2>
+            <p style="margin-bottom: 20px;">Contact us to purchase templates or discuss custom agent development for your business.</p>
             <form class="email-form" action="https://formspree.io/f/xwpklgev" method="POST">
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <input type="hidden" name="_subject" value="New OpenClaw Template Waitlist Signup">
+                <input type="email" name="email" placeholder="Your email" required>
+                <input type="text" name="template" placeholder="Which template?" style="flex: 1; min-width: 250px; padding: 15px 20px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
+                <input type="hidden" name="_subject" value="OpenClaw Template Purchase Inquiry">
                 <input type="hidden" name="_next" value="https://g-hunterai.github.io/openclaw-templates/?success=true">
-                <button type="submit">Get Early Access</button>
+                <button type="submit">Contact Us</button>
             </form>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">We'll respond within 24 hours with purchase details and setup instructions.</p>
         </div>
         
         <footer>
